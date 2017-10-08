@@ -1,0 +1,133 @@
+@mixin pull-left { float: left; }
+@mixin pull-right { float: right; }
+@mixin pull-clear { clear: both; }
+
+@mixin space-big { padding-top: 1.0cm; }
+@mixin space-medium { padding-top: 0.75cm; }
+@mixin space-normal { padding-top: 0.5cm; }
+@mixin space-small { padding-top: 0.25cm; }
+
+@mixin font-huge { font-size: 24pt; }
+@mixin font-big { font-size: 16pt; }
+@mixin font-medium { font-size: 14pt; }
+@mixin font-normal { font-size: 12pt; }
+@mixin font-small { font-size: 10pt; }
+
+@mixin color-red { color: #e06666; }
+@mixin color-green { color: #6aa84f; }
+@mixin color-blue { color: #3d85c6; }
+@mixin color-black { color: #555; }
+@mixin color-gray { color: #bbb; }
+
+html, body, div, p, ul, a {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include font-normal();
+  @include color-black();
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  p:not(:first-of-type) {
+    @include space-small();
+  }
+
+  ul {
+    padding-left: 1em;
+  }
+
+  a {
+    @include color-black();
+    text-decoration: none;
+  }
+}
+
+.header {
+  .left {
+    @include pull-left();
+    @include color-red();
+
+    .name {
+      @include font-huge();
+    }
+
+    .title {
+      @include font-medium();
+    }
+
+    .kaizen {
+      @include font-huge();
+    }
+  }
+
+  .right, & a {
+    @include pull-right();
+    @include color-gray();
+    text-align: right;
+  }
+
+  .headline {
+    @include pull-clear();
+    @include space-small();
+  }
+}
+
+.chapter {
+  @include pull-clear();
+
+  .title {
+    @include space-big();
+    @include font-big();
+    @include color-gray();
+    font-weight: bold;
+  }
+
+  .section {
+    @include pull-clear();
+
+    .title {
+      @include space-medium();
+      @include font-big();
+      @include color-green();
+    }
+
+    .subtitle {
+      @include pull-clear();
+      @include space-normal();
+      @include font-big();
+      @include color-blue();
+    }
+
+    .content {
+      @include pull-clear();
+      @include space-small();
+    }
+
+    .left {
+      @include pull-left();
+      @include font-normal();
+      @include color-gray();
+      vertical-align: bottom;
+      width: 20%;
+    }
+
+    .right {
+      @include pull-right();
+      width: 80%;
+    }
+  }
+}
+
+.disclaimer {
+  @include space-medium();
+  @include font-small();
+  @include color-gray();
+}
+
+.page-number {
+  @include space-small();
+  @include color-gray();
+  text-align: center;
+}
