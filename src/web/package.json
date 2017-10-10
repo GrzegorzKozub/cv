@@ -4,11 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --live-reload false",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "pdf": "powershell -NoLogo -NoProfile ../../cli/pdf.ps1 -Dir ../../"
   },
   "private": true,
   "dependencies": {
