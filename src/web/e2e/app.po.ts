@@ -1,11 +1,14 @@
 import { browser } from 'protractor';
+import { parse } from 'url';
 
 export class AppPage {
-  navigateTo() {
-    return browser.get('/');
+  navigateTo(path: string) {
+    return browser.get(path);
   }
 
-  getTitle() {
-    return browser.getTitle();
+  getPathName() {
+    return browser.getCurrentUrl().then(data => {
+      return parse(data).pathname;
+    });
   }
 }
