@@ -7,6 +7,7 @@ if ($File -eq '') { $File = 'Grzegorz Kozub.pdf' }
 
 wkhtmltopdf `
   --footer-html $FooterUrl `
+  --javascript-delay 750 `
   --margin-bottom 3cm `
   --margin-left 1cm `
   --margin-right 1cm `
