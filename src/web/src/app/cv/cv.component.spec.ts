@@ -1,12 +1,7 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CvComponent } from './cv.component';
-import { HeaderComponent } from './header/header.component';
-import { RecentJobComponent } from './recent-job/recent-job.component';
-import { PastJobsComponent } from './past-jobs/past-jobs.component';
-import { NotableProjectsComponent } from './notable-projects/notable-projects.component';
-import { SkillsComponent } from './skills/skills.component';
-import { EducationComponent } from './education/education.component';
 
 describe('CvComponent', () => {
   let component: CvComponent;
@@ -14,15 +9,8 @@ describe('CvComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        CvComponent,
-        HeaderComponent,
-        RecentJobComponent,
-        PastJobsComponent,
-        NotableProjectsComponent,
-        SkillsComponent,
-        EducationComponent
-      ]
+      declarations: [CvComponent],
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 
