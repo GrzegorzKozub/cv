@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CvModule } from './cv/cv.module';
 import { FooterModule } from './footer/footer.module';
 import { CvService } from './shared/cv.service';
+import { FooterService } from './shared/footer.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +18,7 @@ import { CvService } from './shared/cv.service';
     CvModule,
     FooterModule
   ],
-  providers: [CvService],
+  providers: [CvService, FooterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
