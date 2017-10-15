@@ -2,6 +2,7 @@ import { async, getTestBed, inject, TestBed } from '@angular/core/testing';
 import { BaseRequestOptions, ConnectionBackend, Http, RequestOptions, Response, ResponseOptions } from '@angular/http';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 
+import { environment } from '../../environments/environment';
 import { Cv, Header } from './cv';
 import { CvService } from './cv.service';
 
@@ -45,7 +46,7 @@ describe('CvService', () => {
         service.getHeader().subscribe(() => {
           expect(connections).toEqual(1);
           expect(lastConnection).toBeDefined();
-          expect(lastConnection.request.url).toEqual('/assets/cv.json');
+          expect(lastConnection.request.url).toEqual(environment.apiUrl + 'cv.json');
         });
       });
     })));

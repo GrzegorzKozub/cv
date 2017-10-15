@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
+import { environment } from '../../environments/environment';
 import { Cv, Header } from './cv';
 
 @Injectable()
@@ -19,7 +20,7 @@ export class CvService {
       return Observable.of(this.cache);
     } else {
       return this.http
-        .get('/assets/cv.json')
+        .get(environment.apiUrl + 'cv.json')
         .map((response: Response) => response.json())
         .do((cv: Cv) => this.cache = cv);
     }

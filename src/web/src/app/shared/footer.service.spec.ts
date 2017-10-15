@@ -4,6 +4,7 @@ import { MockBackend, MockConnection } from '@angular/http/testing';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Subject } from 'rxjs/Rx';
 
+import { environment } from '../../environments/environment';
 import { Footer } from './footer';
 import { FooterService } from './footer.service';
 
@@ -73,7 +74,7 @@ describe('FooterService', () => {
         service.getFooter().subscribe(() => {
           expect(connections).toEqual(1);
           expect(lastConnection).toBeDefined();
-          expect(lastConnection.request.url).toEqual('/assets/footer.json');
+          expect(lastConnection.request.url).toEqual(environment.apiUrl + 'footer.json');
         });
       });
     })));

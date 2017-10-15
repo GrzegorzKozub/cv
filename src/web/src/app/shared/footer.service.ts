@@ -3,6 +3,7 @@ import { Http, Response } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 
+import { environment } from '../../environments/environment';
 import { Footer } from './footer';
 import { Page } from './page';
 
@@ -25,7 +26,7 @@ export class FooterService {
       return Observable.of(this.cache);
     } else {
       return this.http
-        .get('/assets/footer.json')
+        .get(environment.apiUrl + 'footer.json')
         .map((response: Response) => response.json())
         .do((footer: Footer) => this.cache = footer);
     }
