@@ -80,9 +80,7 @@ describe('FooterService', () => {
     })));
 
     it('should return footer', async(inject([FooterService], (service: FooterService) => {
-      service.getFooter().subscribe((footer) => {
-        expect(footer).toBeDefined();
-      });
+      service.getFooter().subscribe(footer => expect(footer).toBeDefined());
     })));
   });
 });

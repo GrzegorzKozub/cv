@@ -52,9 +52,7 @@ describe('CvService', () => {
     })));
 
     it('should return header', async(inject([CvService], (service: CvService) => {
-      service.getHeader().subscribe((header) => {
-        expect(header).toBeDefined();
-      });
+      service.getHeader().subscribe(header => expect(header).toBeDefined());
     })));
   });
 });
