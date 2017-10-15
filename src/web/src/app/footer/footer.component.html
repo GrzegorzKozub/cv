@@ -1,10 +1,10 @@
 <ng-container *ngIf="model | async as m">
 
-  <div class="disclaimer" [style.visibility]="showDisclaimer ? 'visible' : 'hidden'">
+  <div class="disclaimer" [style.visibility]="page.last ? 'visible' : 'hidden'">
     {{ m.disclaimer }}
   </div>
   <div class="page-number">
-    <span>- {{ pageNumber }} -</span>
+    <span>- {{ page.number }} -</span>
   </div>
 
 </ng-container>
