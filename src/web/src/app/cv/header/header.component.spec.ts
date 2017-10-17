@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Rx';
 
 import { Header } from '../../shared/cv';
 import { CvService } from '../../shared/cv.service';
+import { testCv } from '../../shared/test-data';
 import { HeaderComponent } from './header.component';
 
 describe('HeaderComponent', () => {
@@ -13,16 +14,7 @@ describe('HeaderComponent', () => {
   let cvService: CvService;
 
   beforeEach(async(() => {
-    header = <Header>{
-      name: 'name',
-      title: 'title',
-      kaizen: 'kaizen',
-      location: 'location',
-      phone: 'phone',
-      email: 'email',
-      web: 'web',
-      headline: 'headline'
-    };
+    header = testCv.header;
 
     cvService = jasmine.createSpyObj<CvService>('CvService', {
       'getHeader': Observable.of(header)

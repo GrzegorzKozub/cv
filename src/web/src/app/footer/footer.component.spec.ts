@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Rx';
 import { Footer } from '../shared/footer';
 import { FooterService } from '../shared/footer.service';
 import { Page } from '../shared/page';
+import { testFooter, testPage } from '../shared/test-data';
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
@@ -15,8 +16,8 @@ describe('FooterComponent', () => {
   let footerService: FooterService;
 
   beforeEach(async(() => {
-    page = <Page>{ number: 3, last: true };
-    footer = <Footer>{ disclaimer: 'disclaimer' };
+    page = testPage;
+    footer = testFooter;
 
     footerService = jasmine.createSpyObj<FooterService>('FooterService', {
       'getPage': page,
