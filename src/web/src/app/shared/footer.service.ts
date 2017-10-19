@@ -13,7 +13,7 @@ export class FooterService {
 
   constructor(private activatedRoute: ActivatedRoute, private http: Http) { }
 
-  public getPage(): Page {
+  getPage(): Page {
     const params = this.activatedRoute.snapshot.queryParams;
     return <Page>{
       number: params.page,
@@ -21,7 +21,7 @@ export class FooterService {
     };
   }
 
-  public getFooter(): Observable<Footer> {
+  getFooter(): Observable<Footer> {
     if (this.cache) {
       return Observable.of(this.cache);
     } else {

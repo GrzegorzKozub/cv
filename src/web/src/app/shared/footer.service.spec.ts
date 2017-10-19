@@ -66,6 +66,10 @@ describe('FooterService', () => {
   });
 
   describe('getFooter', () => {
+    it('should return footer', async(inject([FooterService], (service: FooterService) => {
+      service.getFooter().subscribe(footer => expect(footer).toBeDefined());
+    })));
+
     it('should fetch data only when no cache', async(inject([FooterService], (service: FooterService) => {
       expect(connections).toEqual(0);
       expect(lastConnection).toBeUndefined();
@@ -77,10 +81,6 @@ describe('FooterService', () => {
           expect(lastConnection.request.url).toEqual(environment.apiUrl + 'footer.json');
         });
       });
-    })));
-
-    it('should return footer', async(inject([FooterService], (service: FooterService) => {
-      service.getFooter().subscribe(footer => expect(footer).toBeDefined());
     })));
   });
 });

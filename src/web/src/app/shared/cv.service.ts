@@ -19,7 +19,7 @@ export class CvService {
     return this.getCv().map(cv => cv.recentJob);
   }
 
-  private getCv(): Observable<Cv> {
+  getCv(): Observable<Cv> {
     if (this.cache) {
       return Observable.of(this.cache);
     } else {

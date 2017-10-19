@@ -38,40 +38,29 @@ describe('CvService', () => {
   }));
 
   describe('getHeader', () => {
-    it('should fetch data only when no cache', async(inject([CvService], (service: CvService) => {
-      expect(connections).toEqual(0);
-      expect(lastConnection).toBeUndefined();
-      service.getHeader().subscribe(() => {
-        expect(connections).toEqual(1);
-        service.getHeader().subscribe(() => {
-          expect(connections).toEqual(1);
-          expect(lastConnection).toBeDefined();
-          expect(lastConnection.request.url).toEqual(environment.apiUrl + 'cv.json');
-        });
-      });
-    })));
-
     it('should return header', async(inject([CvService], (service: CvService) => {
       service.getHeader().subscribe(header => expect(header).toBeDefined());
     })));
   });
 
   describe('getRecentJob', () => {
+    it('should return recent job', async(inject([CvService], (service: CvService) => {
+      service.getRecentJob().subscribe(recentJob => expect(recentJob).toBeDefined());
+    })));
+  });
+
+  describe('getCv', () => {
     it('should fetch data only when no cache', async(inject([CvService], (service: CvService) => {
       expect(connections).toEqual(0);
       expect(lastConnection).toBeUndefined();
-      service.getRecentJob().subscribe(() => {
+      service.getCv().subscribe(() => {
         expect(connections).toEqual(1);
-        service.getRecentJob().subscribe(() => {
+        service.getCv().subscribe(() => {
           expect(connections).toEqual(1);
           expect(lastConnection).toBeDefined();
           expect(lastConnection.request.url).toEqual(environment.apiUrl + 'cv.json');
         });
       });
-    })));
-
-    it('should return recent job', async(inject([CvService], (service: CvService) => {
-      service.getRecentJob().subscribe(recentJob => expect(recentJob).toBeDefined());
     })));
   });
 });
