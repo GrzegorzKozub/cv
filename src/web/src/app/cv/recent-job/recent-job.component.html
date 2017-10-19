@@ -1,86 +1,45 @@
-<div class="chapter">
-  <div class="title">recent job</div>
+<div id="recent-job" *ngIf="model | async as m">
 
-  <div class="section">
-    <div class="title">
-      <div class="left">company</div>
-      <div class="right">Apsis International AB</div>
-    </div>
-    <div class="content">
-      <div class="left">sector</div>
-      <div class="right">Email marketing</div>
-    </div>
-    <div class="content">
-      <div class="left">profile</div>
-      <div class="right">
-        Apsis offers solutions for email marketing, lead management and e-commerce focussed on Nordic and Asian markets currently supplying over 6000 clients including H&M and Ikea. Apsis Pro is an email marketing system that supports creating, testing, sending, automating and tracking emails and SMS. It also supports mailing list management. Individual send-outs vary from a single to a couple of million subscribers. Apsis Pro also has Event and Survey functionality. Apsis Integrations provides APIs with high-performance mailing list import support. On top of that they deliver integration with CRM systems.
-      </div>
-    </div>
-
-    <div class="subtitle">
-      <div class="left">title</div>
-      <div class="right">Architect, Developer, Tech Lead and Team Leader</div>
-    </div>
-    <div class="content">
-      <div class="left">time</div>
-      <div class="right">July 2015 - September 2016 (1 year 3 months)</div>
-    </div>
-    <div class="content">
-      <div class="left">tech</div>
-      <div class="right">.NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, AngularJS, Git, TFS, Windows</div>
-    </div>
-    <div class="content">
-      <div class="left">roles</div>
-      <div class="right">
-        <p>
-          As part of Architecture Team I was designing technical solutions for Apsis Pro and Integrations using Domain-Driven Design. Some of them were enhancements to an existing legacy ASP.Net MVC code and some were greenfield designs that were then implemented as AngularJS front-end and ASP.Net WebAPI back-end. I was also involved in technical designs for public REST API improvements, high volume importer performance optimization and push integration rewrite. I took part in choosing the technology that was later used for implementation. My responsibilities were to ensure compatibility with the existing system while allowing high performance, good security, maintainability and deployment story.
-        </p>
-        <p>
-          As a Tech Lead, I provided mentoring about in-house solutions, architecture and infrastructure. I was approving various implementation choices like database design, libraries, infrastructure alignment etc. I helped developers writing clean and maintainable code that keeps all the SOLID Principles, is properly Unit-Tested and designed according to Apsis DDD Guidance and Coding Standard. I was involved in teaching developers how to conduct a productive Code Review.
-        </p>
-        <p>
-          As emerging DevOps culture in Apsis was one of my main focuses, I co-authored the Release Process to ensure quick and safe updates to production. I then became the Release Manager. I was co-ordinating release testing and live deployment. We used Git, TFS and Release Management for CI. I also helped maintaining and growing production, staging and development infrastructure implemented as VMs on various cloud computing providers.
-        </p>
-        <p>
-          Never lost that passion for code, so I still contributed the development and maintenance of multiple web apps, APIs and integration solutions.
-        </p>
-        <p>
-          I co-designed and took part in On-Call Process that is a 24/7 developer and admin support that improves stability and availability of Apsis Pro and Integrations.
-        </p>
-        <p>
-          I was given a pleasure of leading a team of 5 great developers in Warsaw. I helped them plan their projects and made sure the have no obstacles. We used our interpretation of Scrum for bigger, more plannable implementations and Kanban for maintenance. I kept track of my teammates work and was responsible for performance reviews and bonuses. I was also interviewing new hires.
-        </p>
-        <p>
-          Finally, I represented the company in Poland and managed the office in Warsaw.
-        </p>
-      </div>
-
-      <div class="subtitle">
-        <div class="left">title</div>
-        <div class="right">Software Developer</div>
+  <div class="chapter">
+    <div class="title">recent job</div>
+    <div class="section">
+      <div class="title">
+        <div class="left">company</div>
+        <div class="right">{{ m.company.name }}</div>
       </div>
       <div class="content">
-        <div class="left">time</div>
-        <div class="right">September 2012 - June 2015 (2 year 10 months)</div>
+        <div class="left">sector</div>
+        <div class="right">{{ m.company.sector }}</div>
       </div>
       <div class="content">
-        <div class="left">tech</div>
-        <div class="right">.NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, Ruby, PowerShell, Windows</div>
+        <div class="left">profile</div>
+        <div class="right">{{ m.company.profile }}</div>
       </div>
-      <div class="content">
-        <div class="left">roles</div>
-        <div class="right">
-          <p>
-            I started with Apsis as a developer by joining the Maintenance Team and exploring the system and its codebase by fixing bugs. Later I was assigned to projects that added functionality to Apsis Pro and Integrations.
-          </p>
-          <p>
-            The code I was exposed to consisted mostly of legacy ASP.Net and ASP.Net MVC web apps with a considerable amount of front-end code in JavaScript using jQuery. Later I had an opportunity to change the background processing apps among which builders taking care of rendering and sending the emails and NServiceBus-based message processors are most noteworthy. Finally I got to write code in public REST API and mailing list importers. I was also involved in changing legacy T-SQL stored procedures.
-          </p>
-          <p>
-            When a proper Continuous Integration turned out to be needed, together with a consultant hired for this purpose I was coding an in-house, custom deployment solution in Ruby and PowerShell.
-          </p>
+
+      <ng-container *ngFor="let t of m.titles">
+
+        <div class="subtitle">
+          <div class="left">title</div>
+          <div class="right">{{ t.name }}</div>
         </div>
-      </div>
+        <div class="content">
+          <div class="left">time</div>
+          <div class="right">{{ t.time }}</div>
+        </div>
+        <div class="content">
+          <div class="left">tech</div>
+          <div class="right">{{ t.tech }}</div>
+        </div>
+        <div class="content">
+          <div class="left">roles</div>
+          <div class="right">
+            <p *ngFor="let r of t.roles">{{ r }}</p>
+          </div>
+        </div>
+
+      </ng-container>
+
     </div>
   </div>
+
 </div>

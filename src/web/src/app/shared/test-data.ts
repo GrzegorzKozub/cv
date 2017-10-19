@@ -12,6 +12,21 @@ const testCv = <Cv>{
     email: 'email',
     web: 'web',
     headline: 'headline'
+  },
+  recentJob: {
+    company: {
+      name: 'name',
+      sector: 'sector',
+      profile: 'profile'
+    },
+    titles: [
+      {
+        name: 'name',
+        time: 'time',
+        tech: 'tech',
+        roles: ['role']
+      }
+    ]
   }
 };
 
