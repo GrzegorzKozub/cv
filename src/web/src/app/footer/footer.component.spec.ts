@@ -1,11 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { Observable } from 'rxjs/Rx';
 
 import { Footer } from '../shared/footer';
 import { FooterService } from '../shared/footer.service';
 import { Page } from '../shared/page';
 import { testFooter, testPage } from '../shared/test-data';
+import { expectModelInView, getView } from '../shared/test-helpers';
+import { testFooterService } from '../shared/test-services';
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
@@ -18,11 +19,7 @@ describe('FooterComponent', () => {
   beforeEach(async(() => {
     page = testPage;
     footer = testFooter;
-
-    footerService = jasmine.createSpyObj<FooterService>('FooterService', {
-      'getPage': page,
-      'getFooter': Observable.of(footer)
-    });
+    footerService = testFooterService;
 
     TestBed.configureTestingModule({
       providers: [{ provide: FooterService, useValue: footerService }],
@@ -60,7 +57,7 @@ describe('FooterComponent', () => {
         fixture.detectChanges();
         expect(
           fixture
-            .debugElement.query(By.css(`.page-number`))
+            .debugElement.query(By.css('.page-number'))
             .nativeElement.textContent
         ).toContain(page.number);
       });
@@ -77,7 +74,7 @@ describe('FooterComponent', () => {
           fixture.detectChanges();
           expect(
             fixture
-              .debugElement.query(By.css(`.disclaimer`))
+              .debugElement.query(By.css('.disclaimer'))
               .styles['visibility']
           ).toEqual(data.visibility);
         });
@@ -88,11 +85,7 @@ describe('FooterComponent', () => {
     it('should populate view', async(() => {
       fixture.whenStable().then(() => {
         fixture.detectChanges();
-        expect(
-          fixture
-            .debugElement.query(By.css('#footer'))
-            .nativeElement.textContent
-        ).toContain(footer.disclaimer);
+        expectModelInView(footer, getView(fixture, '#footer'));
       });
       component.ngOnInit();
     }));
