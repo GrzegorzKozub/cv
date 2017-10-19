@@ -50,7 +50,7 @@ describe('RecentJobComponent', () => {
       fixture.whenStable().then(() => {
         fixture.detectChanges();
         const view = fixture
-          .debugElement.query(By.css(`#recent-job`))
+          .debugElement.query(By.css('#recent-job'))
           .nativeElement.textContent;
         Object.keys(recentJob.company).forEach(prop => {
           expect(view).toContain(recentJob.company[prop]);

@@ -90,7 +90,7 @@ describe('FooterComponent', () => {
         fixture.detectChanges();
         expect(
           fixture
-            .debugElement.query(By.css(`.disclaimer`))
+            .debugElement.query(By.css('#footer'))
             .nativeElement.textContent
         ).toContain(footer.disclaimer);
       });

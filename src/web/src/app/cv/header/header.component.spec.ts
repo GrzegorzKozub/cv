@@ -50,7 +50,7 @@ describe('HeaderComponent', () => {
       fixture.whenStable().then(() => {
         fixture.detectChanges();
         const view = fixture
-          .debugElement.query(By.css(`.header`))
+          .debugElement.query(By.css('#header'))
           .nativeElement.textContent;
         Object.keys(header).forEach(prop => {
           expect(view).toContain(header[prop]);

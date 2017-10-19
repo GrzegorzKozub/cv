@@ -1,45 +1,43 @@
-<div id="recent-job" *ngIf="model | async as m">
+<div class="chapter" id="recent-job" *ngIf="model | async as m">
 
-  <div class="chapter">
-    <div class="title">recent job</div>
-    <div class="section">
-      <div class="title">
-        <div class="left">company</div>
-        <div class="right">{{ m.company.name }}</div>
-      </div>
-      <div class="content">
-        <div class="left">sector</div>
-        <div class="right">{{ m.company.sector }}</div>
-      </div>
-      <div class="content">
-        <div class="left">profile</div>
-        <div class="right">{{ m.company.profile }}</div>
-      </div>
-
-      <ng-container *ngFor="let t of m.titles">
-
-        <div class="subtitle">
-          <div class="left">title</div>
-          <div class="right">{{ t.name }}</div>
-        </div>
-        <div class="content">
-          <div class="left">time</div>
-          <div class="right">{{ t.time }}</div>
-        </div>
-        <div class="content">
-          <div class="left">tech</div>
-          <div class="right">{{ t.tech }}</div>
-        </div>
-        <div class="content">
-          <div class="left">roles</div>
-          <div class="right">
-            <p *ngFor="let r of t.roles">{{ r }}</p>
-          </div>
-        </div>
-
-      </ng-container>
-
+  <div class="title">recent job</div>
+  <div class="section">
+    <div class="title">
+      <div class="left">company</div>
+      <div class="right">{{ m.company.name }}</div>
     </div>
+    <div class="content">
+      <div class="left">sector</div>
+      <div class="right">{{ m.company.sector }}</div>
+    </div>
+    <div class="content">
+      <div class="left">profile</div>
+      <div class="right">{{ m.company.profile }}</div>
+    </div>
+
+    <ng-container *ngFor="let t of m.titles">
+
+      <div class="subtitle">
+        <div class="left">title</div>
+        <div class="right">{{ t.name }}</div>
+      </div>
+      <div class="content">
+        <div class="left">time</div>
+        <div class="right">{{ t.time }}</div>
+      </div>
+      <div class="content">
+        <div class="left">tech</div>
+        <div class="right">{{ t.tech }}</div>
+      </div>
+      <div class="content">
+        <div class="left">roles</div>
+        <div class="right">
+          <p *ngFor="let r of t.roles">{{ r }}</p>
+        </div>
+      </div>
+
+    </ng-container>
+
   </div>
 
 </div>
