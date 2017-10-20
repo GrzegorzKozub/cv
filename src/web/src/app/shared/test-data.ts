@@ -31,6 +31,6 @@ const testCv = <Cv>{
 };
 
 const testFooter = <Footer>{ disclaimer: 'disclaimer' };
-const testPage = <Page>{ number: 3, last: true };
+const testPage = <Page>{ number: 3, last: true, version: 'version' };
 
 export { testCv, testFooter, testPage };

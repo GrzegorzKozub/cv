@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "pdf": "powershell -NoLogo -NoProfile ../../cli/pdf.ps1 -Dir ../../"
+    "pdf": "powershell -NoLogo -NoProfile ../../cli/pdf.ps1 -Dir ../../",
+    "version": "ts-node ./version.ts"
   },
   "private": true,
   "dependencies": {

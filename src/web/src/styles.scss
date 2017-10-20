@@ -120,14 +120,36 @@ body {
   }
 }
 
-.disclaimer {
-  @include space-medium();
-  @include font-small();
+.footer {
   @include color-gray();
-}
 
-.page-number {
-  @include space-small();
-  @include color-gray();
-  text-align: center;
+  .disclaimer {
+    @include space-medium();
+    @include font-small();
+  }
+
+  .page {
+    @include space-small();
+
+    @mixin width-one-third {
+      display: inline-block;
+      width: 33%;
+    }
+
+    .left {
+      @include width-one-third();
+      text-align: left;
+    }
+
+    .center {
+      @include width-one-third();
+      text-align: center;
+    }
+
+    .right {
+      @include pull-right();
+      @include width-one-third();
+      text-align: right;
+    }
+  }
 }

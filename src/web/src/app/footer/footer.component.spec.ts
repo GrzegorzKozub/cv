@@ -52,18 +52,6 @@ describe('FooterComponent', () => {
       component.ngOnInit();
     }));
 
-    it('should display page number', async(() => {
-      fixture.whenStable().then(() => {
-        fixture.detectChanges();
-        expect(
-          fixture
-            .debugElement.query(By.css('.page-number'))
-            .nativeElement.textContent
-        ).toContain(page.number);
-      });
-      component.ngOnInit();
-    }));
-
     for (const data of [
       { lastPage: false, visibility: 'hidden' },
       { lastPage: true, visibility: 'visible' }
@@ -74,7 +62,7 @@ describe('FooterComponent', () => {
           fixture.detectChanges();
           expect(
             fixture
-              .debugElement.query(By.css('.disclaimer'))
+              .debugElement.query(By.css('#footer .disclaimer'))
               .styles['visibility']
           ).toEqual(data.visibility);
         });
@@ -85,7 +73,10 @@ describe('FooterComponent', () => {
     it('should populate view', async(() => {
       fixture.whenStable().then(() => {
         fixture.detectChanges();
-        expectModelInView(footer, getView(fixture, '#footer'));
+        const view = getView(fixture, '#footer');
+        expectModelInView(footer, view);
+        expect(view).toContain(page.number);
+        expect(view).toContain(page.version);
       });
       component.ngOnInit();
     }));
