@@ -1,6 +1,7 @@
 export interface Cv {
   header: Header;
   recentJob: Job;
+  pastJobs: Job[];
 }
 
 export interface Header {
@@ -21,12 +22,13 @@ export interface Job {
 
 export interface Company {
   name: string;
-  sector: string;
-  profile: string;
+  sector: string | undefined;
+  profile: string | undefined;
 }
 
 export interface Title {
   name: string;
+  sector: string | undefined;
   time: string;
   tech: string;
   roles: string[];

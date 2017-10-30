@@ -49,6 +49,12 @@ describe('CvService', () => {
     })));
   });
 
+  describe('getPastJobs', () => {
+    it('should return past jobs', async(inject([CvService], (service: CvService) => {
+      service.getPastJobs().subscribe(pastJobs => expect(pastJobs).toBeDefined());
+    })));
+  });
+
   describe('getCv', () => {
     it('should fetch data only when no cache', async(inject([CvService], (service: CvService) => {
       expect(connections).toEqual(0);

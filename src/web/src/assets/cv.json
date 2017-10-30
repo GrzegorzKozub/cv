@@ -41,5 +41,71 @@
         ]
       }
     ]
-  }
+  },
+  "pastJobs": [
+    {
+      "company": {
+        "name": "Hewlett Packard Enterprise"
+      },
+      "titles": [
+        {
+          "name": "Tech Lead and Software Developer at Microsoft Practice",
+          "sector": "Public administration",
+          "time": "January 2010 - August 2012 (2 years 8 months)",
+          "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, Digital Certificates, Windows",
+          "roles": [
+            "Maintain and develop web and desktop apps",
+            "Implement transport security, authentication and authorization for sensitive web services",
+            "Provide consultancy for Microsoft technology stack and web technology",
+            "Be a Tech Lead for an agile development team following Scrum"
+          ]
+        },
+        {
+          "name": "Banking Multi-channel Front-end Developer",
+          "sector": "Banking",
+          "time": "March 2009 - December 2009 (10 months)",
+          "tech": ".NET, C#, XHTML, XSLT, Oracle, PL/SQL, JavaScript, Shell Scripting, UNIX",
+          "roles": [
+            "Develop fixes and changes for a multi-technology web app",
+            "Design and implement reports with UNIX Shell and PL/SQL"
+          ]
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Electronic Data Systems"
+      },
+      "titles": [
+        {
+          "name": "Defect and Release Management Technical Support",
+          "sector": "Banking",
+          "time": "September 2006 - November 2008 (2 years 3 months)",
+          "tech": "Quality Center, QuickTest Professional, Excel, Visual Basic for Applications, Windows",
+          "roles": [
+            "Plan, develop and support Defect and Release Management Process for a large system implementation",
+            "Design and program automated Excel-based tools for Defect and Release Management Process"
+          ]
+        },
+        {
+          "name": "Digital Workflow Data SME",
+          "sector": "Food",
+          "time": "June 2006 - August 2006 (3 months)",
+          "tech": "AssetCenter, ServiceCenter, Sybase, SQL, Shell Scripting, UNIX",
+          "roles": [
+            "Process data using an ITIL-based Asset and Problem Management solution called Digital Workflow"
+          ]
+        },
+        {
+          "name": "Migration Technical Tester and Technical Solution Analyst",
+          "sector": "Telecommunications",
+          "time": "October 2004 - May 2006 (1 year 8 months)",
+          "tech": "PowerCenter, Oracle, PL/SQL, Shell Scripting, UNIX",
+          "roles": [
+            "Analyze, design and provide integration testing for a migration solution"
+          ]
+        }
+      ]
+    }
+  ]
 }
