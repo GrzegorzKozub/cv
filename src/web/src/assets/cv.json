@@ -107,5 +107,41 @@
         }
       ]
     }
+  ],
+  "notableProjects": [
+    {
+      "company": {
+        "name": "Apsis International AB"
+      },
+      "projects": [
+        {
+          "name": "Event module for APSIS Pro",
+          "time": "March 2016",
+          "summary": "An interesting project we worked on for Apsis was about re-architecturing and enrich the existing Event module. The functionality allows for managing sessions, sending invites and reminders via email and sms, tracking registrations (with seat booking) and attendance and finally gathering feedback. This was one of the first modules of APSIS Pro designed using Domain-Driven Design. We put it together as a SPA with AngularJS 1.x and ASP.Net Web API supported by some background processing apps. Notably a set of public APIs was included that supported registering and managing attendees. We split work so that all of us worked on all layers as full-stack developers."
+        },
+        {
+          "name": "Updates to APSIS Pro Integrations",
+          "time": "August 2016",
+          "summary": "Since Apsis is constantly growing it turned out our existing public API, high volume subscription importers and push integration needed a boost in performance. Interestingly, importers and push are expected to work with data from one to a couple million subscribers. Together with my mates in Malmo we've done load testing and improving API and importer throughput. Me and my team in Warsaw rewritten the push integration as a horizontally scalable app based on NServiceBus backed by MSMQ queues."
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Hewlett Packard Enterprise"
+      },
+      "projects": [
+        {
+          "name": "Driver Candidate Profile",
+          "time": "August 2012",
+          "summary": "This SOAP web service system is used for processing driver candidate data from inception when a person registers for a driving school, through training and exams to the point when such candidate profile actually becomes input data for a driver's licence doc. We were tasked with designing the XSD schema that supported growing driver candidate history and implementing web services that allow 3rd parties to integrate so that the document flow that was once done on paper via post office is now automated over the wire. That allowed us to grow our skills in Windows Communication Foundation (.NET) and Client Certificates auth."
+        },
+        {
+          "name": "Vehicle and Driver System",
+          "time": "August 2011",
+          "summary": "For our public administration client in Poland we've been adding changes and fixing defects in the system used on clerk desktops to process vehicle registration and driver's license docs. It's a distributed Windows Forms (.NET) rich client deployed on a couple hundred departments connecting to one of the few regional SQL Server database instances. Notably we used Composite UI Application Block together with the Unit of Work pattern. We also automated the deployment to those desktops with Windows batch scripts and the regional partitioning allowed for canary releases."
+        }
+      ]
+    }
   ]
 }

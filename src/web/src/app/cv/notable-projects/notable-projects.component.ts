@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs/Rx';
+
+import { NotableProject } from '../../shared/cv';
+import { CvService } from '../../shared/cv.service';
 
 @Component({
   selector: 'app-notable-projects',
@@ -6,6 +10,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notable-projects.component.scss']
 })
 export class NotableProjectsComponent implements OnInit {
-  constructor() { }
-  ngOnInit() { }
+  model = new Subject<NotableProject[]>();
+
+  constructor(private cvService: CvService) { }
+
+  ngOnInit() {
+    this.cvService
+      .getNotableProjects()
+      .subscribe(notableProjects => this.model.next(notableProjects));
+  }
 }

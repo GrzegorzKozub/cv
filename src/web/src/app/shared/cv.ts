@@ -2,6 +2,7 @@ export interface Cv {
   header: Header;
   recentJob: Job;
   pastJobs: Job[];
+  notableProjects: NotableProject[];
 }
 
 export interface Header {
@@ -20,6 +21,11 @@ export interface Job {
   titles: Title[];
 }
 
+export interface NotableProject {
+  company: Company;
+  projects: Project[];
+}
+
 export interface Company {
   name: string;
   sector: string | undefined;
@@ -32,4 +38,10 @@ export interface Title {
   time: string;
   tech: string;
   roles: string[];
+}
+
+export interface Project {
+  name: string;
+  time: string;
+  summary: string;
 }

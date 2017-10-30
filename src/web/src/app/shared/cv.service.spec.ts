@@ -55,6 +55,12 @@ describe('CvService', () => {
     })));
   });
 
+  describe('getNotableProjects', () => {
+    it('should return notable projects', async(inject([CvService], (service: CvService) => {
+      service.getNotableProjects().subscribe(notableProjects => expect(notableProjects).toBeDefined());
+    })));
+  });
+
   describe('getCv', () => {
     it('should fetch data only when no cache', async(inject([CvService], (service: CvService) => {
       expect(connections).toEqual(0);

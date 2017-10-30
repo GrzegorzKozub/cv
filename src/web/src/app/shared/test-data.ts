@@ -43,6 +43,20 @@ const testCv = <Cv>{
         }
       ]
     }
+  ],
+  notableProjects: [
+    {
+      company: {
+        name: 'notableProjects[0].company.name'
+      },
+      projects: [
+        {
+          name: 'notableProjects[0].projects[0].name',
+          time: 'notableProjects[0].projects[0].time',
+          summary: 'notableProjects[0].projects[0].summary'
+        }
+      ]
+    }
   ]
 };
 
