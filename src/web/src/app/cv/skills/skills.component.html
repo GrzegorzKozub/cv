@@ -1,113 +1,25 @@
-<div class="chapter">
+<div class="chapter" id="skills" *ngIf="model | async as m">
+
   <div class="title">skills</div>
-
-  <div class="section">
+  <div class="section" *ngFor="let sbc of m">
     <div class="title">
       <div class="left">category</div>
-      <div class="right">Design and implementation</div>
+      <div class="right">{{ sbc.category }}</div>
     </div>
 
-    <div class="subtitle">
-      <div class="left">skill</div>
-      <div class="right">System architecture design</div>
-    </div>
-    <div class="content">
-      <div class="left">summary</div>
-      <div class="right">
-        I have experience in designing application architecture using Domain-Driven Design. I compose apps as domains in DDD sense. I know how to structure web app front-end and back-end as well communicate them via HTTP. I design public REST APIs and background processing apps that talk over HTTP or messages. I contribute to database design and know about how to optimize SQL Server queries for performance. I make sure proper security gets into technical requirements and is implemented. I can suggest technology for implementation. My current learning focus is everything related to Microservices Architecture.
-      </div>
-    </div>
+    <ng-container *ngFor="let s of sbc.skills">
 
-    <div class="subtitle">
-      <div class="left">skill</div>
-      <div class="right">Front-end development</div>
-    </div>
-    <div class="content">
-      <div class="left">summary</div>
-      <div class="right">
-        In the past I've developed front-ends in ASP.Net MVC and currently my preferred framework is AngularJS. I have work experience with 1.x and follow the style guide provided by John Pappa. I can code JavaScript quite well including the use of some Design Patterns especially for creating modularized apps. I like my front-end code unit-tested and linted. Recently I enjoy learning TypeScript that makes my JS more productive and less error prone. I have a good understanding of HTML5 and have chosen Bootstrap for styling. I prefer Sass or Less abstraction over plain CSS3.
+      <div class="subtitle">
+        <div class="left">skill</div>
+        <div class="right">{{ s.name }}</div>
       </div>
-    </div>
+      <div class="content">
+        <div class="left">summary</div>
+        <div class="right">{{ s.summary }}</div>
+      </div>
 
-    <div class="subtitle">
-      <div class="left">skill</div>
-      <div class="right">Back-end development</div>
-    </div>
-    <div class="content">
-      <div class="left">summary</div>
-      <div class="right">
-        I've written apps in C# on .NET using ASP.Net MVC, low level ADO.Net or Entity Framework ORM and now I'm learning .NET Core and Node.js. The latter are a better fit to Microservices Architecture. I can develop APIs using ASP.Net Web API and older WCF. I've used NServiceBus library for messaging quite a lot but I prefer RabbitMQ. I've been using NUnit, Moq and FluentAssertions for testing. I have experience in building and maintaining databases on SQL Server and using T-SQL.
-      </div>
-    </div>
+    </ng-container>
+
   </div>
 
-  <div class="section">
-    <div class="title">
-      <div class="left">category</div>
-      <div class="right">Processes, patterns and practices</div>
-    </div>
-
-    <div class="subtitle">
-      <div class="left">skill</div>
-      <div class="right">Perceive DevOps as organization culture</div>
-    </div>
-    <div class="content">
-      <div class="left">summary</div>
-      <div class="right">
-        I have knowledge about Continuous Integration and Delivery processes and tools. I know git well and used git-flow in my work. I have been using TFS for builds and Release Management for deployment although I prefer a PowerShell script over a Release Management workflow. I have work experience with configuring IIS web server. I contribute to system infrastructure design involving app deployment, scaling out and inter-communication. I've been structuring systems using VMs and now learning about containers. Mostly however, to me, DevOps is a culture I like to promote and aim for people I work with and myself to get better at The Three Ways.
-      </div>
-    </div>
-
-    <div class="subtitle">
-      <div class="left">skill</div>
-      <div class="right">Focus on simple, clean and maintainable code</div>
-    </div>
-    <div class="content">
-      <div class="left">summary</div>
-      <div class="right">
-        I believe code is more often read and amended than initially designed and written. For this reason, when writing code, I follow SOLID Principles and attempt to reach the highest possible coverage with maintainable Unit Tests. I like the idea of local coding standard and validating the code with linters. I consider how straightforward and readable my code is before committing it to source control. I understand source control branches and commit history are one of the best documentation for code written in agile manner so I pay attention to proper branch naming, commit atomicity and commit message content.
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="title">
-      <div class="left">category</div>
-      <div class="right">Leadership</div>
-    </div>
-
-    <div class="subtitle">
-      <div class="left">skill</div>
-      <div class="right">Tech leadership</div>
-    </div>
-    <div class="content">
-      <div class="left">summary</div>
-      <div class="right">
-        I encourage my teammates to come up with ideas for solutions and then I challenge them and discusses with them. I promote simple, clean and maintainable code that takes advantage of SOLID.
-      </div>
-    </div>
-
-    <div class="subtitle">
-      <div class="left">skill</div>
-      <div class="right">Team leadership</div>
-    </div>
-    <div class="content">
-      <div class="left">summary</div>
-      <div class="right">
-        I motivate my teammates to achieve their project goals as well as individual development plans. I reward taking ownership, being innovative and questioning status quo. I help out with dire situations.
-      </div>
-    </div>
-
-    <div class="subtitle">
-      <div class="left">skill</div>
-      <div class="right">Always learning and sharing</div>
-    </div>
-    <div class="content">
-      <div class="left">summary</div>
-      <div class="right">
-        I try to keep up with the web and development technology changes. I'm keen on learning new tech and discussing about it during some coffee break. I keep a list of interesting software development books I've read and courses I've completed:
-        <a href="https://github.com/GrzegorzKozub/books-and-courses">https://github.com/GrzegorzKozub/books-and-courses</a>.
-      </div>
-    </div>
-  </div>
 </div>

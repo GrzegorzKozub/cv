@@ -3,6 +3,7 @@ export interface Cv {
   recentJob: Job;
   pastJobs: Job[];
   notableProjects: NotableProject[];
+  skills: SkillsByCategory[];
 }
 
 export interface Header {
@@ -26,6 +27,11 @@ export interface NotableProject {
   projects: Project[];
 }
 
+export interface SkillsByCategory {
+  category: string;
+  skills: Skill[];
+}
+
 export interface Company {
   name: string;
   sector: string | undefined;
@@ -43,5 +49,10 @@ export interface Title {
 export interface Project {
   name: string;
   time: string;
+  summary: string;
+}
+
+export interface Skill {
+  name: string;
   summary: string;
 }

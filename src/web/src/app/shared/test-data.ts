@@ -57,6 +57,17 @@ const testCv = <Cv>{
         }
       ]
     }
+  ],
+  skills: [
+    {
+      category: 'skills[0].category',
+      skills: [
+        {
+          name: 'skills[0].skills[0].name',
+          summary: 'skills[0].skills[0].summary'
+        }
+      ]
+    }
   ]
 };
 
