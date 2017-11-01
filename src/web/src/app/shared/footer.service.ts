@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs/Rx';
+import { Observable, Subject } from 'rxjs/Rx';
 
 import { environment } from '../../environments/environment';
 import { Footer } from './footer';
@@ -9,7 +9,7 @@ import { Page } from './page';
 
 @Injectable()
 export class FooterService {
-  private cache: Footer;
+  private cache: Subject<Footer>;
 
   constructor(private activatedRoute: ActivatedRoute, private http: Http) { }
 
@@ -24,12 +24,13 @@ export class FooterService {
 
   getFooter(): Observable<Footer> {
     if (this.cache) {
-      return Observable.of(this.cache);
+      return this.cache;
     } else {
+      this.cache = new Subject<Footer>();
       return this.http
         .get(environment.apiUrl + 'footer.json')
         .map((response: Response) => response.json())
-        .do((footer: Footer) => this.cache = footer);
+        .do((footer: Footer) => this.cache.next(footer));
     }
   }
 }
