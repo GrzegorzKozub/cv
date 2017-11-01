@@ -1,13 +1,13 @@
-<div class="chapter" id="skills" *ngIf="model | async as m">
+<div class="chapter" id="skills" *ngIf="model | async as skills">
 
   <div class="title">skills</div>
-  <div class="section" *ngFor="let sbc of m">
+  <div class="section" *ngFor="let skill of skills">
     <div class="title">
       <div class="left">category</div>
-      <div class="right">{{ sbc.category }}</div>
+      <div class="right">{{ skill.category }}</div>
     </div>
 
-    <ng-container *ngFor="let s of sbc.skills">
+    <ng-container *ngFor="let s of skill.skills">
 
       <div class="subtitle">
         <div class="left">skill</div>

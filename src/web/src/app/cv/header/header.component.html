@@ -1,20 +1,20 @@
-<div class="header" id="header" *ngIf="model | async as m">
+<div class="header" id="header" *ngIf="model | async as header">
 
   <div class="left">
-    <div class="name">{{ m.name }}</div>
-    <div class="title">{{ m.title }}</div>
-    <div class="kaizen">{{ m.kaizen }}</div>
+    <div class="name">{{ header.name }}</div>
+    <div class="title">{{ header.title }}</div>
+    <div class="kaizen">{{ header.kaizen }}</div>
   </div>
   <div class="right">
-    <div>{{ m.location }}</div>
-    <div>{{ m.phone }}</div>
+    <div>{{ header.location }}</div>
+    <div>{{ header.phone }}</div>
     <div>
-      <a href="mailto:{{ m.email }}">{{ m.email }}</a>
+      <a href="mailto:{{ header.email }}">{{ header.email }}</a>
     </div>
     <div>
-      <a href="{{ m.web }}">{{ m.web }}</a>
+      <a href="{{ header.web }}">{{ header.web }}</a>
     </div>
   </div>
-  <div class="headline">{{ m.headline }}</div>
+  <div class="headline">{{ header.headline }}</div>
 
 </div>

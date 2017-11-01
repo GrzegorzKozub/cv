@@ -1,38 +1,38 @@
-<div class="chapter" id="recent-job" *ngIf="model | async as m">
+<div class="chapter" id="recent-job" *ngIf="model | async as recentJob">
 
   <div class="title">recent job</div>
   <div class="section">
     <div class="title">
       <div class="left">company</div>
-      <div class="right">{{ m.company.name }}</div>
+      <div class="right">{{ recentJob.company.name }}</div>
     </div>
     <div class="content">
       <div class="left">sector</div>
-      <div class="right">{{ m.company.sector }}</div>
+      <div class="right">{{ recentJob.company.sector }}</div>
     </div>
     <div class="content">
       <div class="left">profile</div>
-      <div class="right">{{ m.company.profile }}</div>
+      <div class="right">{{ recentJob.company.profile }}</div>
     </div>
 
-    <ng-container *ngFor="let t of m.titles">
+    <ng-container *ngFor="let title of recentJob.titles">
 
       <div class="subtitle">
         <div class="left">title</div>
-        <div class="right">{{ t.name }}</div>
+        <div class="right">{{ title.name }}</div>
       </div>
       <div class="content">
         <div class="left">time</div>
-        <div class="right">{{ t.time }}</div>
+        <div class="right">{{ title.time }}</div>
       </div>
       <div class="content">
         <div class="left">tech</div>
-        <div class="right">{{ t.tech }}</div>
+        <div class="right">{{ title.tech }}</div>
       </div>
       <div class="content">
         <div class="left">roles</div>
         <div class="right">
-          <p *ngFor="let r of t.roles">{{ r }}</p>
+          <p *ngFor="let role of title.roles">{{ role }}</p>
         </div>
       </div>
 

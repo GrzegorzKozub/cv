@@ -1,33 +1,33 @@
-<div class="chapter" id="education" *ngIf="model | async as m">
+<div class="chapter" id="education" *ngIf="model | async as education">
 
   <div class="title">education</div>
-  <div class="section" *ngFor="let e of m">
+  <div class="section" *ngFor="let e of education">
     <div class="title">
       <div class="left">school</div>
       <div class="right">{{ e.school }}</div>
     </div>
 
-    <ng-container *ngFor="let s of e.studies">
+    <ng-container *ngFor="let school of e.studies">
 
       <div class="subtitle">
         <div class="left">faculty</div>
-        <div class="right">{{ s.faculty }}</div>
+        <div class="right">{{ school.faculty }}</div>
       </div>
       <div class="content">
         <div class="left">major</div>
-        <div class="right">{{ s.major }}</div>
+        <div class="right">{{ school.major }}</div>
       </div>
       <div class="content">
         <div class="left">time</div>
-        <div class="right">{{ s.time }}</div>
+        <div class="right">{{ school.time }}</div>
       </div>
       <div class="content">
         <div class="left">thesis</div>
-        <div class="right">{{ s.thesis }}</div>
+        <div class="right">{{ school.thesis }}</div>
       </div>
       <div class="content">
         <div class="left">grades</div>
-        <div class="right">{{ s.grades }}</div>
+        <div class="right">{{ school.grades }}</div>
       </div>
 
     </ng-container>
