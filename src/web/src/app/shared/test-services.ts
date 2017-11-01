@@ -9,7 +9,8 @@ const testCvService = jasmine.createSpyObj<CvService>('CvService', {
   'getRecentJob': Observable.of(testCv.recentJob),
   'getPastJobs': Observable.of(testCv.pastJobs),
   'getNotableProjects': Observable.of(testCv.notableProjects),
-  'getSkills': Observable.of(testCv.skills)
+  'getSkills': Observable.of(testCv.skills),
+  'getEducation': Observable.of(testCv.education)
 });
 
 const testFooterService = jasmine.createSpyObj<FooterService>('FooterService', {

@@ -1,80 +1,37 @@
-<div class="chapter">
+<div class="chapter" id="education" *ngIf="model | async as m">
+
   <div class="title">education</div>
-
-  <div class="section">
+  <div class="section" *ngFor="let e of m">
     <div class="title">
       <div class="left">school</div>
-      <div class="right">University of Silesia</div>
+      <div class="right">{{ e.school }}</div>
     </div>
 
-    <div class="subtitle">
-      <div class="left">faculty</div>
-      <div class="right">Faculty of Computer Science and Material Studies</div>
-    </div>
-    <div class="content">
-      <div class="left">major</div>
-      <div class="right">Computer Science, Master's studies</div>
-    </div>
-    <div class="content">
-      <div class="left">time</div>
-      <div class="right">September 2002 - June 2004 (2 years)</div>
-    </div>
-    <div class="content">
-      <div class="left">thesis</div>
-      <div class="right">The coding influence for the Evolutionary Algorithms efficacy</div>
-    </div>
-    <div class="content">
-      <div class="left">grades</div>
-      <div class="right">4.65 (2-year average)</div>
-    </div>
+    <ng-container *ngFor="let s of e.studies">
 
-    <div class="subtitle">
-      <div class="left">faculty</div>
-      <div class="right">Faculty of Technology</div>
-    </div>
-    <div class="content">
-      <div class="left">major</div>
-      <div class="right">Computer Science, Bachelor's studies</div>
-    </div>
-    <div class="content">
-      <div class="left">time</div>
-      <div class="right">September 1999 - June 2002 (3 years)</div>
-    </div>
-    <div class="content">
-      <div class="left">thesis</div>
-      <div class="right">Web-based Faculty Recruitment System</div>
-    </div>
-    <div class="content">
-      <div class="left">grades</div>
-      <div class="right">4.45 (3-year average)</div>
-    </div>
+      <div class="subtitle">
+        <div class="left">faculty</div>
+        <div class="right">{{ s.faculty }}</div>
+      </div>
+      <div class="content">
+        <div class="left">major</div>
+        <div class="right">{{ s.major }}</div>
+      </div>
+      <div class="content">
+        <div class="left">time</div>
+        <div class="right">{{ s.time }}</div>
+      </div>
+      <div class="content">
+        <div class="left">thesis</div>
+        <div class="right">{{ s.thesis }}</div>
+      </div>
+      <div class="content">
+        <div class="left">grades</div>
+        <div class="right">{{ s.grades }}</div>
+      </div>
+
+    </ng-container>
+
   </div>
 
-  <div class="section">
-    <div class="title">
-      <div class="left">school</div>
-      <div class="right">Technical College of the Jaworzno III Power Plant</div>
-    </div>
-
-    <div class="subtitle">
-      <div class="left">specialty</div>
-      <div class="right">Computer Systems</div>
-    </div>
-    <div class="content">
-      <div class="left">title</div>
-      <div class="right">Electronic Technician</div>
-    </div>
-    <div class="content">
-      <div class="left">time</div>
-      <div class="right">September 1994 - June 1999 (5 years)</div>
-    </div>
-    <div class="content">
-      <div class="left">thesis</div>
-      <div class="right">User Manual with Classes for Electronics Workbench 4</div>
-    </div>
-    <div class="content">
-      <div class="left">grades</div>
-      <div class="right">5.00 (exam's average), 4.96 (certificate of secondary education average)</div>
-    </div>
-  </div>
 </div>

@@ -3,7 +3,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
 import { environment } from '../../environments/environment';
-import { Cv, Header, Job, NotableProject, SkillsByCategory } from './cv';
+import { Cv, Education, Header, Job, NotableProject, SkillsByCategory } from './cv';
 
 @Injectable()
 export class CvService {
@@ -29,6 +29,10 @@ export class CvService {
 
   getSkills(): Observable<SkillsByCategory[]> {
     return this.getCv().map(cv => cv.skills);
+  }
+
+  getEducation(): Observable<Education[]> {
+    return this.getCv().map(cv => cv.education);
   }
 
   getCv(): Observable<Cv> {

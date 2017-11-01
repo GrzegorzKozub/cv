@@ -67,6 +67,12 @@ describe('CvService', () => {
     })));
   });
 
+  describe('getEducation', () => {
+    it('should return education', async(inject([CvService], (service: CvService) => {
+      service.getEducation().subscribe(education => expect(education).toBeDefined());
+    })));
+  });
+
   describe('getCv', () => {
     it('should fetch data only when no cache', async(inject([CvService], (service: CvService) => {
       expect(connections).toEqual(0);

@@ -4,6 +4,7 @@ export interface Cv {
   pastJobs: Job[];
   notableProjects: NotableProject[];
   skills: SkillsByCategory[];
+  education: Education[];
 }
 
 export interface Header {
@@ -55,4 +56,17 @@ export interface Project {
 export interface Skill {
   name: string;
   summary: string;
+}
+
+export interface Education {
+  school: string;
+  studies: Study[];
+}
+
+export interface Study {
+  faculty: string;
+  major: string;
+  time: string;
+  thesis: string;
+  grades: string;
 }

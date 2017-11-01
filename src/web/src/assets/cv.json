@@ -192,5 +192,38 @@
         }
       ]
     }
+  ],
+  "education": [
+    {
+      "school": "University of Silesia",
+      "studies": [
+        {
+          "faculty": "Faculty of Computer Science and Material Studies",
+          "major": "Computer Science, Master's studies",
+          "time": "September 2002 - June 2004 (2 years)",
+          "thesis": "The coding influence for the Evolutionary Algorithms efficacy",
+          "grades": "4.65 (2-year average)"
+        },
+        {
+          "faculty": "Faculty of Technology",
+          "major": "Computer Science, Bachelor's studies",
+          "time": "September 1999 - June 2002 (3 years)",
+          "thesis": "Web-based Faculty Recruitment System",
+          "grades": "4.45 (3-year average)"
+        }
+      ]
+    },
+    {
+      "school": "Technical College of the Jaworzno III Power Plant",
+      "studies": [
+        {
+          "faculty": "Computer Systems",
+          "major": "Electronic Technician",
+          "time": "September 1994 - June 1999 (5 years)",
+          "thesis": "User Manual with Classes for Electronics Workbench 4",
+          "grades": "5.00 (exam's average), 4.96 (certificate of secondary education average)"
+        }
+      ]
+    }
   ]
 }
