@@ -2,7 +2,7 @@ export interface Cv {
   header: Header;
   recentJob: Job;
   pastJobs: Job[];
-  notableProjects: NotableProject[];
+  notableProjects: ProjectsByCompany[];
   skills: SkillsByCategory[];
   education: Education[];
 }
@@ -23,7 +23,7 @@ export interface Job {
   titles: Title[];
 }
 
-export interface NotableProject {
+export interface ProjectsByCompany {
   company: Company;
   projects: Project[];
 }

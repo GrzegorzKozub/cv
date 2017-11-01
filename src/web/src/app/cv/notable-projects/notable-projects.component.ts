@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs/Rx';
 
-import { NotableProject } from '../../shared/cv';
+import { ProjectsByCompany } from '../../shared/cv';
 import { CvService } from '../../shared/cv.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { CvService } from '../../shared/cv.service';
   styleUrls: ['./notable-projects.component.scss']
 })
 export class NotableProjectsComponent implements OnInit {
-  model = new Subject<NotableProject[]>();
+  model = new Subject<ProjectsByCompany[]>();
 
   constructor(private cvService: CvService) { }
 

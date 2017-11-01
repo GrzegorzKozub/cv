@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotableProject } from '../../shared/cv';
+import { ProjectsByCompany } from '../../shared/cv';
 import { CvService } from '../../shared/cv.service';
 import { testCv } from '../../shared/test-data';
 import { expectModelInView, getView } from '../../shared/test-helpers';
@@ -10,7 +10,7 @@ import { NotableProjectsComponent } from './notable-projects.component';
 describe('NotableProjectsComponent', () => {
   let component: NotableProjectsComponent;
   let fixture: ComponentFixture<NotableProjectsComponent>;
-  let notableProjects: NotableProject[];
+  let notableProjects: ProjectsByCompany[];
   let cvService: CvService;
 
   beforeEach(async(() => {
