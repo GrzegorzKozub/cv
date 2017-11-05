@@ -154,7 +154,7 @@
         },
         {
           "name": "Front-end development",
-          "summary": "In the past I've developed front-ends in ASP.Net MVC and currently my preferred framework is AngularJS. I have work experience with 1.x and follow the style guide provided by John Pappa. I can code JavaScript quite well including the use of some Design Patterns especially for creating modularized apps. I like my front-end code unit-tested and linted. Recently I enjoy learning TypeScript that makes my JS more productive and less error prone. I have a good understanding of HTML5 and have chosen Bootstrap for styling. I prefer Sass or Less abstraction over plain CSS3."
+          "summary": "In the past I've developed front-ends in ASP.Net MVC and then AngularJS. Currently my preferred framework is Angular. I can code JavaScript quite well including the use of some Design Patterns especially for creating modularized apps. I like my front-end code unit-tested and linted. Recently I enjoy learning TypeScript that makes my JS more productive and less error prone. I have a good understanding of HTML5 and have chosen Bootstrap for styling. I prefer Sass or Less abstraction over plain CSS3."
         },
         {
           "name": "Back-end development",
