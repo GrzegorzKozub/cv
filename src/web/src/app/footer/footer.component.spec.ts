@@ -3,9 +3,9 @@ import { By } from '@angular/platform-browser';
 
 import { footerFake } from '../core/footer.fake';
 import { FooterService } from '../core/footer.service';
+import { footerServiceSpy } from '../core/footer.service.spy';
 import { pageFake } from '../core/page.fake';
 import { expectModelInView, getView } from '../core/test-helpers';
-import { testFooterService } from '../core/test-services';
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
@@ -14,7 +14,7 @@ describe('FooterComponent', () => {
   let footerService: FooterService;
 
   beforeEach(async(() => {
-    footerService = testFooterService;
+    footerService = footerServiceSpy;
 
     TestBed.configureTestingModule({
       providers: [{ provide: FooterService, useValue: footerService }],
