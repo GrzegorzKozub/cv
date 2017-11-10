@@ -9,13 +9,10 @@ import { SkillsComponent } from './skills.component';
 describe('SkillsComponent', () => {
   let component: SkillsComponent;
   let fixture: ComponentFixture<SkillsComponent>;
-  let cvService: CvService;
 
   beforeEach(async(() => {
-    cvService = cvServiceSpy;
-
     TestBed.configureTestingModule({
-      providers: [{ provide: CvService, useValue: cvService }],
+      providers: [{ provide: CvService, useValue: cvServiceSpy }],
       declarations: [SkillsComponent]
     }).compileComponents();
   }));
@@ -32,7 +29,7 @@ describe('SkillsComponent', () => {
 
   describe('ngOnInit', () => {
     it('should call getSkills', () => {
-      expect(cvService.getSkills).toHaveBeenCalled();
+      expect(cvServiceSpy.getSkills).toHaveBeenCalled();
     });
 
     it('should populate model', async(() => {

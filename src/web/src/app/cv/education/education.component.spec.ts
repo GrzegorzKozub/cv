@@ -9,13 +9,10 @@ import { EducationComponent } from './education.component';
 describe('EducationComponent', () => {
   let component: EducationComponent;
   let fixture: ComponentFixture<EducationComponent>;
-  let cvService: CvService;
 
   beforeEach(async(() => {
-    cvService = cvServiceSpy;
-
     TestBed.configureTestingModule({
-      providers: [{ provide: CvService, useValue: cvService }],
+      providers: [{ provide: CvService, useValue: cvServiceSpy }],
       declarations: [EducationComponent]
     }).compileComponents();
   }));
@@ -32,7 +29,7 @@ describe('EducationComponent', () => {
 
   describe('ngOnInit', () => {
     it('should call getEducation', () => {
-      expect(cvService.getEducation).toHaveBeenCalled();
+      expect(cvServiceSpy.getEducation).toHaveBeenCalled();
     });
 
     it('should populate model', async(() => {

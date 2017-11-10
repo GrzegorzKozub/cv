@@ -9,13 +9,10 @@ import { HeaderComponent } from './header.component';
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
-  let cvService: CvService;
 
   beforeEach(async(() => {
-    cvService = cvServiceSpy;
-
     TestBed.configureTestingModule({
-      providers: [{ provide: CvService, useValue: cvService }],
+      providers: [{ provide: CvService, useValue: cvServiceSpy }],
       declarations: [HeaderComponent]
     }).compileComponents();
   }));
@@ -32,7 +29,7 @@ describe('HeaderComponent', () => {
 
   describe('ngOnInit', () => {
     it('should call getHeader', () => {
-      expect(cvService.getHeader).toHaveBeenCalled();
+      expect(cvServiceSpy.getHeader).toHaveBeenCalled();
     });
 
     it('should populate model', async(() => {

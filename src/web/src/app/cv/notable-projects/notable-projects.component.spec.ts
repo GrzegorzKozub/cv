@@ -9,13 +9,10 @@ import { NotableProjectsComponent } from './notable-projects.component';
 describe('NotableProjectsComponent', () => {
   let component: NotableProjectsComponent;
   let fixture: ComponentFixture<NotableProjectsComponent>;
-  let cvService: CvService;
 
   beforeEach(async(() => {
-    cvService = cvServiceSpy;
-
     TestBed.configureTestingModule({
-      providers: [{ provide: CvService, useValue: cvService }],
+      providers: [{ provide: CvService, useValue: cvServiceSpy }],
       declarations: [NotableProjectsComponent]
     }).compileComponents();
   }));
@@ -32,7 +29,7 @@ describe('NotableProjectsComponent', () => {
 
   describe('ngOnInit', () => {
     it('should call getNotableProjects', () => {
-      expect(cvService.getNotableProjects).toHaveBeenCalled();
+      expect(cvServiceSpy.getNotableProjects).toHaveBeenCalled();
     });
 
     it('should populate model', async(() => {

@@ -9,13 +9,10 @@ import { RecentJobComponent } from './recent-job.component';
 describe('RecentJobComponent', () => {
   let component: RecentJobComponent;
   let fixture: ComponentFixture<RecentJobComponent>;
-  let cvService: CvService;
 
   beforeEach(async(() => {
-    cvService = cvServiceSpy;
-
     TestBed.configureTestingModule({
-      providers: [{ provide: CvService, useValue: cvService }],
+      providers: [{ provide: CvService, useValue: cvServiceSpy }],
       declarations: [RecentJobComponent]
     }).compileComponents();
   }));
@@ -32,7 +29,7 @@ describe('RecentJobComponent', () => {
 
   describe('ngOnInit', () => {
     it('should call getRecentJob', () => {
-      expect(cvService.getRecentJob).toHaveBeenCalled();
+      expect(cvServiceSpy.getRecentJob).toHaveBeenCalled();
     });
 
     it('should populate model', async(() => {

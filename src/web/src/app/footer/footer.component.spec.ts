@@ -11,13 +11,10 @@ import { FooterComponent } from './footer.component';
 describe('FooterComponent', () => {
   let component: FooterComponent;
   let fixture: ComponentFixture<FooterComponent>;
-  let footerService: FooterService;
 
   beforeEach(async(() => {
-    footerService = footerServiceSpy;
-
     TestBed.configureTestingModule({
-      providers: [{ provide: FooterService, useValue: footerService }],
+      providers: [{ provide: FooterService, useValue: footerServiceSpy }],
       declarations: [FooterComponent]
     }).compileComponents();
   }));
@@ -34,8 +31,8 @@ describe('FooterComponent', () => {
 
   describe('ngOnInit', () => {
     it('should call getPage and getFooter', () => {
-      expect(footerService.getPage).toHaveBeenCalled();
-      expect(footerService.getFooter).toHaveBeenCalled();
+      expect(footerServiceSpy.getPage).toHaveBeenCalled();
+      expect(footerServiceSpy.getFooter).toHaveBeenCalled();
     });
 
     it('should populate page', () => {
