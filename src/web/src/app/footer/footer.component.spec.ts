@@ -5,7 +5,7 @@ import { footerFake } from '../core/footer.fake';
 import { FooterService } from '../core/footer.service';
 import { footerServiceSpy } from '../core/footer.service.spy';
 import { pageFake } from '../core/page.fake';
-import { expectModelInView, getView } from '../core/test-helpers';
+import { expectModelInView, getView } from '../shared/test-helpers';
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
