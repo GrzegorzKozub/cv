@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs/Rx';
 
-import { Footer } from '../shared/footer';
-import { FooterService } from '../shared/footer.service';
-import { Page } from '../shared/page';
+import { Footer } from '../core/footer';
+import { FooterService } from '../core/footer.service';
+import { Page } from '../core/page';
 
 @Component({
   selector: 'app-footer',

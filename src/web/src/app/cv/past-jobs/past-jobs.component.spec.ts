@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Job } from '../../shared/cv';
-import { CvService } from '../../shared/cv.service';
-import { testCv } from '../../shared/test-data';
-import { expectModelInView, getView } from '../../shared/test-helpers';
-import { testCvService } from '../../shared/test-services';
+import { Job } from '../../core/cv';
+import { CvService } from '../../core/cv.service';
+import { testCv } from '../../core/test-data';
+import { expectModelInView, getView } from '../../core/test-helpers';
+import { testCvService } from '../../core/test-services';
 import { PastJobsComponent } from './past-jobs.component';
 
 describe('PastJobsComponent', () => {

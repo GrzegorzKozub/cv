@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Education } from '../../shared/cv';
-import { CvService } from '../../shared/cv.service';
-import { testCv } from '../../shared/test-data';
-import { expectModelInView, getView } from '../../shared/test-helpers';
-import { testCvService } from '../../shared/test-services';
+import { Education } from '../../core/cv';
+import { CvService } from '../../core/cv.service';
+import { testCv } from '../../core/test-data';
+import { expectModelInView, getView } from '../../core/test-helpers';
+import { testCvService } from '../../core/test-services';
 import { EducationComponent } from './education.component';
 
 describe('EducationComponent', () => {

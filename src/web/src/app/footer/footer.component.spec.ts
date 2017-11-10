@@ -1,12 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-import { Footer } from '../shared/footer';
-import { FooterService } from '../shared/footer.service';
-import { Page } from '../shared/page';
-import { testFooter, testPage } from '../shared/test-data';
-import { expectModelInView, getView } from '../shared/test-helpers';
-import { testFooterService } from '../shared/test-services';
+import { Footer } from '../core/footer';
+import { FooterService } from '../core/footer.service';
+import { Page } from '../core/page';
+import { testFooter, testPage } from '../core/test-data';
+import { expectModelInView, getView } from '../core/test-helpers';
+import { testFooterService } from '../core/test-services';
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {

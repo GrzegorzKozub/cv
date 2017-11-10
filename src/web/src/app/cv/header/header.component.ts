@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs/Rx';
 
-import { Header } from '../../shared/cv';
-import { CvService } from '../../shared/cv.service';
+import { Header } from '../../core/cv';
+import { CvService } from '../../core/cv.service';
 
 @Component({
   selector: 'app-header',
