@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SkillsByCategory } from '../../core/cv';
 import { cvFake } from '../../core/cv.fake';
 import { CvService } from '../../core/cv.service';
 import { expectModelInView, getView } from '../../core/test-helpers';
@@ -10,11 +9,9 @@ import { SkillsComponent } from './skills.component';
 describe('SkillsComponent', () => {
   let component: SkillsComponent;
   let fixture: ComponentFixture<SkillsComponent>;
-  let skills: SkillsByCategory[];
   let cvService: CvService;
 
   beforeEach(async(() => {
-    skills = cvFake.skills;
     cvService = testCvService;
 
     TestBed.configureTestingModule({
@@ -39,7 +36,7 @@ describe('SkillsComponent', () => {
     });
 
     it('should populate model', async(() => {
-      component.model.subscribe(m => expect(m).toEqual(skills));
+      component.model.subscribe(m => expect(m).toEqual(cvFake.skills));
       component.ngOnInit();
     }));
 
@@ -47,8 +44,8 @@ describe('SkillsComponent', () => {
       fixture.whenStable().then(() => {
         fixture.detectChanges();
         const view = getView(fixture, '#skills');
-        expectModelInView(skills[0].category, view);
-        expectModelInView(skills[0].skills[0], view);
+        expectModelInView(cvFake.skills[0].category, view);
+        expectModelInView(cvFake.skills[0].skills[0], view);
       });
       component.ngOnInit();
     }));

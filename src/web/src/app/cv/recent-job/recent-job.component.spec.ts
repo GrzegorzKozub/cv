@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Job } from '../../core/cv';
 import { cvFake } from '../../core/cv.fake';
 import { CvService } from '../../core/cv.service';
 import { expectModelInView, getView } from '../../core/test-helpers';
@@ -10,11 +9,9 @@ import { RecentJobComponent } from './recent-job.component';
 describe('RecentJobComponent', () => {
   let component: RecentJobComponent;
   let fixture: ComponentFixture<RecentJobComponent>;
-  let recentJob: Job;
   let cvService: CvService;
 
   beforeEach(async(() => {
-    recentJob = cvFake.recentJob;
     cvService = testCvService;
 
     TestBed.configureTestingModule({
@@ -39,7 +36,7 @@ describe('RecentJobComponent', () => {
     });
 
     it('should populate model', async(() => {
-      component.model.subscribe(m => expect(m).toEqual(recentJob));
+      component.model.subscribe(m => expect(m).toEqual(cvFake.recentJob));
       component.ngOnInit();
     }));
 
@@ -47,9 +44,9 @@ describe('RecentJobComponent', () => {
       fixture.whenStable().then(() => {
         fixture.detectChanges();
         const view = getView(fixture, '#recent-job');
-        expectModelInView(recentJob.company, view);
-        expectModelInView(recentJob.titles[0], view);
-        expect(view).toContain(recentJob.titles[0].roles[0]);
+        expectModelInView(cvFake.recentJob.company, view);
+        expectModelInView(cvFake.recentJob.titles[0], view);
+        expect(view).toContain(cvFake.recentJob.titles[0].roles[0]);
       });
       component.ngOnInit();
     }));

@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Education } from '../../core/cv';
 import { cvFake } from '../../core/cv.fake';
 import { CvService } from '../../core/cv.service';
 import { expectModelInView, getView } from '../../core/test-helpers';
@@ -10,11 +9,9 @@ import { EducationComponent } from './education.component';
 describe('EducationComponent', () => {
   let component: EducationComponent;
   let fixture: ComponentFixture<EducationComponent>;
-  let education: Education[];
   let cvService: CvService;
 
   beforeEach(async(() => {
-    education = cvFake.education;
     cvService = testCvService;
 
     TestBed.configureTestingModule({
@@ -39,7 +36,7 @@ describe('EducationComponent', () => {
     });
 
     it('should populate model', async(() => {
-      component.model.subscribe(m => expect(m).toEqual(education));
+      component.model.subscribe(m => expect(m).toEqual(cvFake.education));
       component.ngOnInit();
     }));
 
@@ -47,8 +44,8 @@ describe('EducationComponent', () => {
       fixture.whenStable().then(() => {
         fixture.detectChanges();
         const view = getView(fixture, '#education');
-        expectModelInView(education[0].school, view);
-        expectModelInView(education[0].studies[0], view);
+        expectModelInView(cvFake.education[0].school, view);
+        expectModelInView(cvFake.education[0].studies[0], view);
       });
       component.ngOnInit();
     }));
