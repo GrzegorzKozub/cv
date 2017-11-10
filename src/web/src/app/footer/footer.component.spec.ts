@@ -2,9 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
 import { Footer } from '../core/footer';
+import { footerFake } from '../core/footer.fake';
 import { FooterService } from '../core/footer.service';
 import { Page } from '../core/page';
-import { testFooter, testPage } from '../core/test-data';
+import { pageFake } from '../core/page.fake';
 import { expectModelInView, getView } from '../core/test-helpers';
 import { testFooterService } from '../core/test-services';
 import { FooterComponent } from './footer.component';
@@ -17,8 +18,8 @@ describe('FooterComponent', () => {
   let footerService: FooterService;
 
   beforeEach(async(() => {
-    page = testPage;
-    footer = testFooter;
+    page = pageFake;
+    footer = footerFake;
     footerService = testFooterService;
 
     TestBed.configureTestingModule({

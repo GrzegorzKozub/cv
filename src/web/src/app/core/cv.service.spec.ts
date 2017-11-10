@@ -3,8 +3,8 @@ import { BaseRequestOptions, ConnectionBackend, Http, RequestOptions, Response, 
 import { MockBackend, MockConnection } from '@angular/http/testing';
 
 import { environment } from '../../environments/environment';
+import { cvFake } from './cv.fake';
 import { CvService } from './cv.service';
-import { testCv } from './test-data';
 
 describe('CvService', () => {
   let connections: number;
@@ -28,7 +28,7 @@ describe('CvService', () => {
       connections++;
       lastConnection = connection;
       lastConnection.mockRespond(new Response(new ResponseOptions({
-        body: testCv
+        body: cvFake
       })));
     });
   });

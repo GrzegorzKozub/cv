@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProjectsByCompany } from '../../core/cv';
+import { cvFake } from '../../core/cv.fake';
 import { CvService } from '../../core/cv.service';
-import { testCv } from '../../core/test-data';
 import { expectModelInView, getView } from '../../core/test-helpers';
 import { testCvService } from '../../core/test-services';
 import { NotableProjectsComponent } from './notable-projects.component';
@@ -14,7 +14,7 @@ describe('NotableProjectsComponent', () => {
   let cvService: CvService;
 
   beforeEach(async(() => {
-    notableProjects = testCv.notableProjects;
+    notableProjects = cvFake.notableProjects;
     cvService = testCvService;
 
     TestBed.configureTestingModule({

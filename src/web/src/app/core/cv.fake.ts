@@ -1,8 +1,6 @@
 import { Cv } from './cv';
-import { Footer } from './footer';
-import { Page } from './page';
 
-const testCv = <Cv>{
+const cvFake = <Cv>{
   header: {
     name: 'header.name',
     title: 'header.title',
@@ -85,7 +83,4 @@ const testCv = <Cv>{
   ]
 };
 
-const testFooter = <Footer>{ disclaimer: 'disclaimer' };
-const testPage = <Page>{ number: 3, last: true, version: 'version' };
-
-export { testCv, testFooter, testPage };
+export { cvFake };

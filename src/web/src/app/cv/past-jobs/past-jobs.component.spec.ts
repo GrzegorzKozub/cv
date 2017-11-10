@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Job } from '../../core/cv';
+import { cvFake } from '../../core/cv.fake';
 import { CvService } from '../../core/cv.service';
-import { testCv } from '../../core/test-data';
 import { expectModelInView, getView } from '../../core/test-helpers';
 import { testCvService } from '../../core/test-services';
 import { PastJobsComponent } from './past-jobs.component';
@@ -14,7 +14,7 @@ describe('PastJobsComponent', () => {
   let cvService: CvService;
 
   beforeEach(async(() => {
-    pastJobs = testCv.pastJobs;
+    pastJobs = cvFake.pastJobs;
     cvService = testCvService;
 
     TestBed.configureTestingModule({

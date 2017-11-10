@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Education } from '../../core/cv';
+import { cvFake } from '../../core/cv.fake';
 import { CvService } from '../../core/cv.service';
-import { testCv } from '../../core/test-data';
 import { expectModelInView, getView } from '../../core/test-helpers';
 import { testCvService } from '../../core/test-services';
 import { EducationComponent } from './education.component';
@@ -14,7 +14,7 @@ describe('EducationComponent', () => {
   let cvService: CvService;
 
   beforeEach(async(() => {
-    education = testCv.education;
+    education = cvFake.education;
     cvService = testCvService;
 
     TestBed.configureTestingModule({

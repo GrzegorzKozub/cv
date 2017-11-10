@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Header } from '../../core/cv';
+import { cvFake } from '../../core/cv.fake';
 import { CvService } from '../../core/cv.service';
-import { testCv } from '../../core/test-data';
 import { expectModelInView, getView } from '../../core/test-helpers';
 import { testCvService } from '../../core/test-services';
 import { HeaderComponent } from './header.component';
@@ -14,7 +14,7 @@ describe('HeaderComponent', () => {
   let cvService: CvService;
 
   beforeEach(async(() => {
-    header = testCv.header;
+    header = cvFake.header;
     cvService = testCvService;
 
     TestBed.configureTestingModule({

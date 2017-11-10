@@ -5,8 +5,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Subject } from 'rxjs/Rx';
 
 import { environment } from '../../environments/environment';
+import { footerFake } from './footer.fake';
 import { FooterService } from './footer.service';
-import { testFooter } from './test-data';
 
 describe('FooterService', () => {
   let queryParams: Subject<Params>;
@@ -37,7 +37,7 @@ describe('FooterService', () => {
       connections++;
       lastConnection = connection;
       lastConnection.mockRespond(new Response(new ResponseOptions({
-        body: testFooter
+        body: footerFake
       })));
     });
   });
