@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 
-import { CvService } from './cv.service';
-import { FooterService } from './footer.service';
+import { CvService } from './cv/cv.service';
+import { FooterService } from './footer/footer.service';
 
 @NgModule({
   imports: [CommonModule],

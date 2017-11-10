@@ -4,7 +4,7 @@ import { MockBackend, MockConnection } from '@angular/http/testing';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Subject } from 'rxjs/Rx';
 
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { footerFake } from './footer.fake';
 import { FooterService } from './footer.service';
 

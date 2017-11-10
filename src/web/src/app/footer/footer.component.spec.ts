@@ -1,10 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 
-import { footerFake } from '../core/footer.fake';
-import { FooterService } from '../core/footer.service';
-import { footerServiceSpy } from '../core/footer.service.spy';
-import { pageFake } from '../core/page.fake';
+import { footerFake } from '../core/footer/footer.fake';
+import { FooterService } from '../core/footer/footer.service';
+import { footerServiceSpy } from '../core/footer/footer.service.spy';
+import { pageFake } from '../core/footer/page.fake';
 import { expectModelInView, getView } from '../shared/test-helpers';
 import { FooterComponent } from './footer.component';
 

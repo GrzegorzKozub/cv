@@ -2,7 +2,7 @@ import { async, getTestBed, inject, TestBed } from '@angular/core/testing';
 import { BaseRequestOptions, ConnectionBackend, Http, RequestOptions, Response, ResponseOptions } from '@angular/http';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { cvFake } from './cv.fake';
 import { CvService } from './cv.service';
 

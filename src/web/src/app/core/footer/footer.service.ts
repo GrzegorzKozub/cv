@@ -3,7 +3,7 @@ import { Http, Response } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subject } from 'rxjs/Rx';
 
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import { Footer } from './footer';
 import { Page } from './page';
 

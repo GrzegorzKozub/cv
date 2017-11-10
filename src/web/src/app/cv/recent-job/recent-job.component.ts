@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs/Rx';
 
-import { Job } from '../../core/cv';
-import { CvService } from '../../core/cv.service';
+import { Job } from '../../core/cv/cv';
+import { CvService } from '../../core/cv/cv.service';
 
 @Component({
   selector: 'app-recent-job',
