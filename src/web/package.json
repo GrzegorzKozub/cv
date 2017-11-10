@@ -4,13 +4,14 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --live-reload false --prod",
-    "build": "ng build",
-    "test": "ng test",
     "lint": "ng lint",
+    "test": "ng test",
     "e2e": "ng e2e",
-    "pdf": "powershell -NoLogo -NoProfile ../../cli/pdf.ps1 -Dir ../../",
-    "version": "ts-node ./version.ts"
+    "build": "ng build",
+    "version": "ts-node ./version.ts",
+    "serve": "ng serve --live-reload false --prod",
+    "start": "run-s version serve",
+    "pdf": "powershell -NoLogo -NoProfile ../../cli/pdf.ps1 -Dir ../../"
   },
   "private": true,
   "dependencies": {
@@ -43,6 +44,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "npm-run-all": "^4.1.2",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
