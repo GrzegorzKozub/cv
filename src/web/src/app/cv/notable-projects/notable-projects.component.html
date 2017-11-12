@@ -1,29 +1,15 @@
-<div class="chapter" id="notable-projects" *ngIf="model | async as notableProjects">
+<div class="article" id="notable-projects" *ngIf="model | async as notableProjects">
+  <app-title value="notable projects"></app-title>
 
-  <div class="title">notable projects</div>
-  <div class="section" *ngFor="let notableProject of notableProjects">
-    <div class="title">
-      <div class="left">company</div>
-      <div class="right">{{ notableProject.company.name }}</div>
+  <div class="chapter" *ngFor="let notableProject of notableProjects">
+    <app-title label="company" [value]="notableProject.company.name"></app-title>
+
+    <div class="section" *ngFor="let project of notableProject.projects">
+      <app-title label="project" [value]="project.name"></app-title>
+
+      <app-content label="time" [value]="project.time"></app-content>
+      <app-content label="summary" [value]="project.summary"></app-content>
+
     </div>
-
-    <ng-container *ngFor="let project of notableProject.projects">
-
-      <div class="subtitle">
-        <div class="left">project</div>
-        <div class="right">{{ project.name }}</div>
-      </div>
-      <div class="content">
-        <div class="left">time</div>
-        <div class="right">{{ project.time }}</div>
-      </div>
-      <div class="content">
-        <div class="left">summary</div>
-        <div class="right">{{ project.summary }}</div>
-      </div>
-
-    </ng-container>
-
   </div>
-
 </div>

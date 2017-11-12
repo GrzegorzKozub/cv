@@ -9,7 +9,6 @@ import { CvModule } from './cv/cv.module';
 import { FooterModule } from './footer/footer.module';
 
 @NgModule({
-  declarations: [AppComponent],
   imports: [
     BrowserModule,
     HttpModule,
@@ -18,6 +17,7 @@ import { FooterModule } from './footer/footer.module';
     CvModule,
     FooterModule
   ],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

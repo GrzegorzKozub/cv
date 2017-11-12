@@ -6,7 +6,8 @@ const expectModelInView = (model: Object, view: any) => {
 };
 
 const getView = (fixture: ComponentFixture<any>, css: string): any => {
-  return fixture.debugElement.query(By.css(css)).nativeElement.textContent;
+  const found = fixture.debugElement.query(By.css(css));
+  return found ? found.nativeElement.textContent.trim() : null;
 };
 
 export { expectModelInView, getView };

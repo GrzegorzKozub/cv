@@ -6,6 +6,7 @@
 @mixin space-medium { padding-top: 0.75cm; }
 @mixin space-normal { padding-top: 0.5cm; }
 @mixin space-small { padding-top: 0.25cm; }
+@mixin space-tiny { padding-top: 0.1cm; }
 
 @mixin font-huge { font-size: 24pt; }
 @mixin font-big { font-size: 16pt; }
@@ -19,7 +20,7 @@
 @mixin color-black { color: #555; }
 @mixin color-gray { color: #bbb; }
 
-html, body, div, p, ul, a {
+html, body, div, p, ul, li, a {
   font-weight: normal;
   margin: 0;
   padding: 0;
@@ -36,6 +37,10 @@ body {
 
   ul {
     padding-left: 1em;
+
+    li:not(:first-of-type) {
+      @include space-tiny();
+    }
   }
 
   a {
@@ -74,7 +79,7 @@ body {
   }
 }
 
-.chapter {
+.article {
   @include pull-clear();
 
   .title {
@@ -84,7 +89,7 @@ body {
     font-weight: bold;
   }
 
-  .section {
+  .chapter {
     @include pull-clear();
 
     .title {
@@ -93,30 +98,33 @@ body {
       @include color-green();
     }
 
-    .subtitle {
-      @include pull-clear();
-      @include space-normal();
-      @include font-big();
-      @include color-blue();
-    }
+    .section {
+    @include pull-clear();
 
-    .content {
-      @include pull-clear();
-      @include space-small();
+      .title {
+        @include space-normal();
+        @include font-big();
+        @include color-blue();
+      }
     }
+  }
 
-    .left {
-      @include pull-left();
-      @include font-normal();
-      @include color-gray();
-      vertical-align: bottom;
-      width: 20%;
-    }
+  .content {
+    @include pull-clear();
+    @include space-small();
+  }
 
-    .right {
-      @include pull-right();
-      width: 80%;
-    }
+  .label {
+    @include pull-left();
+    @include font-normal();
+    @include color-gray();
+    vertical-align: bottom;
+    width: 20%;
+  }
+
+  .value {
+    @include pull-right();
+    width: 80%;
   }
 }
 

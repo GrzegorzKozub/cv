@@ -1,0 +1,12 @@
+<div class="title">
+
+  <ng-container *ngIf="label; else justValue">
+    <div class="label">{{ label }}</div>
+    <div class="value">{{ value }}</div>
+  </ng-container>
+
+  <ng-template #justValue>
+    {{ value }}
+  </ng-template>
+
+</div>

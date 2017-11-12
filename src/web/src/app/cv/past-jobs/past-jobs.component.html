@@ -1,41 +1,17 @@
-<div class="chapter" id="past-jobs" *ngIf="model | async as pastJobs">
+<div class="article" id="past-jobs" *ngIf="model | async as pastJobs">
+  <app-title value="past jobs"></app-title>
 
-  <div class="title">past jobs</div>
-  <div class="section" *ngFor="let pastJob of pastJobs">
-    <div class="title">
-      <div class="left">company</div>
-      <div class="right">{{ pastJob.company.name }}</div>
+  <div class="chapter" *ngFor="let pastJob of pastJobs">
+    <app-title label="company" [value]="pastJob.company.name"></app-title>
+
+    <div class="section" *ngFor="let title of pastJob.titles">
+      <app-title label="title" [value]="title.name"></app-title>
+
+      <app-content label="sector" [value]="title.sector"></app-content>
+      <app-content label="time" [value]="title.time"></app-content>
+      <app-content label="tech" [value]="title.tech"></app-content>
+      <app-content label="roles" [value]="title.roles" [asBullets]="true"></app-content>
+
     </div>
-
-    <ng-container *ngFor="let title of pastJob.titles">
-
-      <div class="subtitle">
-        <div class="left">title</div>
-        <div class="right">{{ title.name }}</div>
-      </div>
-      <div class="content">
-        <div class="left">sector</div>
-        <div class="right">{{ title.sector }}</div>
-      </div>
-      <div class="content">
-        <div class="left">time</div>
-        <div class="right">{{ title.time }}</div>
-      </div>
-      <div class="content">
-        <div class="left">tech</div>
-        <div class="right">{{ title.tech }}</div>
-      </div>
-      <div class="content">
-        <div class="left">roles</div>
-        <div class="right">
-          <ul>
-            <li *ngFor="let role of title.roles">{{ role }}</li>
-          </ul>
-        </div>
-      </div>
-
-    </ng-container>
-
   </div>
-
 </div>
