@@ -9,7 +9,7 @@
     "e2e": "ng e2e",
     "build": "ng build",
     "version": "ts-node ./version.ts",
-    "serve": "ng serve --live-reload false --prod",
+    "serve": "ng serve --live-reload false --aot",
     "start": "run-s version serve",
     "pdf": "powershell -NoLogo -NoProfile ../../cli/pdf.ps1 -Dir ../../"
   },
