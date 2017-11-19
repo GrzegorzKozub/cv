@@ -2,7 +2,7 @@ import { async, getTestBed, inject, TestBed } from '@angular/core/testing';
 import { BaseRequestOptions, ConnectionBackend, Http, RequestOptions, Response, ResponseOptions } from '@angular/http';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Subject } from 'rxjs/Rx';
+import { Subject } from 'rxjs/Subject';
 
 import { environment } from '../../../environments/environment';
 import { footerFake } from './footer.fake';

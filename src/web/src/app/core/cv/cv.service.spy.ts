@@ -1,4 +1,6 @@
-import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/observable/of';
+
+import { Observable } from 'rxjs/Observable';
 
 import { cvFake } from './cv.fake';
 import { CvService } from './cv.service';

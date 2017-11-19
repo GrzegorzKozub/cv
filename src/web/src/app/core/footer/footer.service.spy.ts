@@ -1,4 +1,6 @@
-import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/observable/of';
+
+import { Observable } from 'rxjs/Observable';
 
 import { footerFake } from './footer.fake';
 import { FooterService } from './footer.service';

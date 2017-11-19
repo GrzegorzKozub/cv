@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject } from 'rxjs/Rx';
+import { Subject } from 'rxjs/Subject';
 
 import { Job } from '../../core/cv/cv';
 import { CvService } from '../../core/cv/cv.service';

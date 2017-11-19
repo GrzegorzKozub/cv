@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject } from 'rxjs/Rx';
+import { Subject } from 'rxjs/Subject';
 
 import { Footer } from '../core/footer/footer';
 import { FooterService } from '../core/footer/footer.service';
