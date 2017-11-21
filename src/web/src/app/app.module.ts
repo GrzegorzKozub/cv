@@ -1,4 +1,3 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,7 +10,6 @@ import { FooterModule } from './footer/footer.module';
 @NgModule({
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
     CoreModule,
     CvModule,
