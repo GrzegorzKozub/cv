@@ -1,5 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, getTestBed, inject, TestBed } from '@angular/core/testing';
-import { BaseRequestOptions, ConnectionBackend, Http, RequestOptions, Response, ResponseOptions } from '@angular/http';
+import { BaseRequestOptions, ConnectionBackend, RequestOptions, Response, ResponseOptions } from '@angular/http';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Subject } from 'rxjs/Subject';
@@ -17,6 +18,7 @@ describe('FooterService', () => {
     queryParams = new Subject<Params>();
 
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       providers: [
         {
           provide: ActivatedRoute,
@@ -24,7 +26,6 @@ describe('FooterService', () => {
         },
         { provide: ConnectionBackend, useClass: MockBackend },
         { provide: RequestOptions, useClass: BaseRequestOptions },
-        Http,
         FooterService
       ]
     });

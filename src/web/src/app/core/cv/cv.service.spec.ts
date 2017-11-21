@@ -1,5 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, getTestBed, inject, TestBed } from '@angular/core/testing';
-import { BaseRequestOptions, ConnectionBackend, Http, RequestOptions, Response, ResponseOptions } from '@angular/http';
+import { BaseRequestOptions, ConnectionBackend, RequestOptions, Response, ResponseOptions } from '@angular/http';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 
 import { environment } from '../../../environments/environment';
@@ -12,10 +13,10 @@ describe('CvService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       providers: [
         { provide: ConnectionBackend, useClass: MockBackend },
         { provide: RequestOptions, useClass: BaseRequestOptions },
-        Http,
         CvService
       ]
     });

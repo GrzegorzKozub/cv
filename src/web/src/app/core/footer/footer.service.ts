@@ -1,5 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
@@ -12,7 +12,7 @@ import { Page } from './page';
 export class FooterService {
   private cache: Subject<Footer>;
 
-  constructor(private activatedRoute: ActivatedRoute, private http: Http) { }
+  constructor(private activatedRoute: ActivatedRoute, private http: HttpClient) { }
 
   getPage(): Page {
     const params = this.activatedRoute.snapshot.queryParams;
@@ -28,9 +28,8 @@ export class FooterService {
       return this.cache;
     } else {
       this.cache = new Subject<Footer>();
-      return this.http
+      return <Observable<Footer>>this.http
         .get(environment.apiUrl + 'footer.json')
-        .map((response: Response) => response.json())
         .do((footer: Footer) => this.cache.next(footer));
     }
   }

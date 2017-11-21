@@ -1,8 +1,8 @@
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 
@@ -13,7 +13,7 @@ import { Cv, Education, Header, Job, ProjectsByCompany, SkillsByCategory } from 
 export class CvService {
   private cache: Subject<Cv>;
 
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   getHeader(): Observable<Header> {
     return this.getCv().map(cv => cv.header);
@@ -44,9 +44,8 @@ export class CvService {
       return this.cache;
     } else {
       this.cache = new Subject<Cv>();
-      return this.http
+      return <Observable<Cv>>this.http
         .get(environment.apiUrl + 'cv.json')
-        .map((response: Response) => response.json())
         .do((cv: Cv) => this.cache.next(cv));
     }
   }
