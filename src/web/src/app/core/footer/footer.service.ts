@@ -29,7 +29,7 @@ export class FooterService {
     } else {
       this.cache = new Subject<Footer>();
       return <Observable<Footer>>this.http
-        .get(environment.apiUrl + 'footer.json')
+        .get(environment.apiUrl + 'footer')
         .do((footer: Footer) => this.cache.next(footer));
     }
   }

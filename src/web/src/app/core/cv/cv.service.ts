@@ -45,7 +45,7 @@ export class CvService {
     } else {
       this.cache = new Subject<Cv>();
       return <Observable<Cv>>this.http
-        .get(environment.apiUrl + 'cv.json')
+        .get(environment.apiUrl + 'cv')
         .do((cv: Cv) => this.cache.next(cv));
     }
   }

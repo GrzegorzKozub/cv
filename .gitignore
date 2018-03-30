@@ -1,5 +1,12 @@
+.vs
+bin
+obj
+
 dist
 node_modules
 yarn-error.log
+
 **/src/environments/version.ts
+
 *.pdf
+*.user

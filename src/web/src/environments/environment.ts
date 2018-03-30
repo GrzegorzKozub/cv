@@ -2,6 +2,6 @@ import { version } from './version';
 
 export const environment = {
   production: false,
-  apiUrl: '/assets/',
+  apiUrl: 'http://localhost:5000/',
   version: version
 };
