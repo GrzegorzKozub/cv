@@ -1,7 +1,4 @@
-import { version } from './version';
-
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:5000/',
-  version: version
+  apiUrl: 'http://localhost:5000/'
 };

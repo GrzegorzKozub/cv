@@ -18,8 +18,7 @@ export class FooterService {
     const params = this.activatedRoute.snapshot.queryParams;
     return <Page>{
       number: params.page,
-      last: params.page && params.topage && params.page === params.topage,
-      version: environment.version
+      last: params.page && params.topage && params.page === params.topage
     };
   }
 

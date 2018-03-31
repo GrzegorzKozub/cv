@@ -48,10 +48,6 @@ describe('FooterService', () => {
   }));
 
   describe('getPage', () => {
-    it('should set version', inject([FooterService], (service: FooterService) => {
-      expect(service.getPage().version).toEqual(environment.version);
-    }));
-
     it('should set page number', inject([FooterService], (service: FooterService) => {
       const pageNumber = 3;
       queryParams['page'] = pageNumber;

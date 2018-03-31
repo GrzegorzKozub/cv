@@ -25,6 +25,7 @@ namespace api
 
             services.AddTransient<ICvService, CvService>();
             services.AddTransient<IFooterService, FooterService>();
+            services.AddTransient<IVersionService, VersionService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

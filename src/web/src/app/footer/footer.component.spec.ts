@@ -68,7 +68,6 @@ describe('FooterComponent', () => {
         const view = getView(fixture, '#footer');
         expectModelInView(footerFake, view);
         expect(view).toContain(pageFake.number);
-        expect(view).toContain(pageFake.version);
       });
       component.ngOnInit();
     }));

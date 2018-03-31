@@ -8,9 +8,8 @@
     "test": "ng test",
     "e2e": "ng e2e",
     "build": "ng build",
-    "version": "ts-node ./version.ts",
     "serve": "ng serve --live-reload false --prod --aot",
-    "start": "run-s version serve",
+    "start": "run-s serve",
     "pdf": "powershell -NoLogo -NoProfile ../../cli/pdf.ps1 -Dir ../../"
   },
   "private": true,
