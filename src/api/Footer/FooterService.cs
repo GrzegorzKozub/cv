@@ -3,21 +3,21 @@ using System.Threading.Tasks;
 using api.Settings;
 using Microsoft.Extensions.Options;
 
-namespace api.Cv
+namespace api.Footer
 {
-    public interface ICvRepository
+    public interface IFooterService
     {
         Task<string> Get();
     }
 
-    internal class CvRepository : ICvRepository
+    internal class FooterService : IFooterService
     {
         private readonly DataConfig config;
 
-        public CvRepository(IOptions<DataConfig> config) =>
+        public FooterService(IOptions<DataConfig> config) =>
             this.config = config.Value;
 
         public Task<string> Get() =>
-            File.ReadAllTextAsync(config.CvPath);
+            File.ReadAllTextAsync(config.FooterPath);
     }
 }

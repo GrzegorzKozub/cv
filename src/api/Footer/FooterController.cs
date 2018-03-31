@@ -6,13 +6,13 @@ namespace api.Footer
     [Route("footer")]
     public class FooterController : Controller
     {
-        private readonly IFooterRepository repository;
+        private readonly IFooterService service;
 
-        public FooterController(IFooterRepository repository) =>
-            this.repository = repository;
+        public FooterController(IFooterService service) =>
+            this.service = service;
 
         [HttpGet]
         public async Task<ContentResult> Get() =>
-            Content(await repository.Get(), "application/json");
+            Content(await service.Get(), "application/json");
     }
 }

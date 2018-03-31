@@ -6,13 +6,13 @@ namespace api.Cv
     [Route("cv")]
     public class CvController : Controller
     {
-        private readonly ICvRepository repository;
+        private readonly ICvService service;
 
-        public CvController(ICvRepository repository) =>
-            this.repository = repository;
+        public CvController(ICvService service) =>
+            this.service = service;
 
         [HttpGet]
         public async Task<ContentResult> Get() =>
-            Content(await repository.Get(), "application/json");
+            Content(await service.Get(), "application/json");
     }
 }

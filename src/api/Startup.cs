@@ -23,8 +23,8 @@ namespace api
             services.AddOptions();
             services.Configure<DataConfig>(Configuration.GetSection(nameof(DataConfig)));
 
-            services.AddTransient<ICvRepository, CvRepository>();
-            services.AddTransient<IFooterRepository, FooterRepository>();
+            services.AddTransient<ICvService, CvService>();
+            services.AddTransient<IFooterService, FooterService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
