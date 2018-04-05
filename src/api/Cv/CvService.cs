@@ -1,7 +1,5 @@
-﻿using System.IO;
-using System.Threading.Tasks;
-using api.Settings;
-using Microsoft.Extensions.Options;
+﻿using System.Threading.Tasks;
+using api.Core;
 
 namespace api.Cv
 {
@@ -12,12 +10,11 @@ namespace api.Cv
 
     internal class CvService : ICvService
     {
-        private readonly DataConfig config;
+        private readonly IDataService dataService;
 
-        public CvService(IOptions<DataConfig> config) =>
-            this.config = config.Value;
+        public CvService(IDataService dataService) =>
+            this.dataService = dataService;
 
-        public Task<string> Get() =>
-            File.ReadAllTextAsync($"{config.Dir}/cv.json");
+        public Task<string> Get() => dataService.ReadFile("cv");
     }
 }

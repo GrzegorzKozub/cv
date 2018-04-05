@@ -1,8 +1,6 @@
-﻿using System.IO;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using api.Settings;
-using Microsoft.Extensions.Options;
+using api.Core;
 
 namespace api.Footer
 {
@@ -13,20 +11,20 @@ namespace api.Footer
 
     internal class FooterService : IFooterService
     {
-        private readonly DataConfig config;
+        private readonly IDataService dataService;
         private readonly IVersionService versionService;
 
         public FooterService(
-            IOptions<DataConfig> config,
+            IDataService dataService,
             IVersionService versionService)
         {
-            this.config = config.Value;
+            this.dataService = dataService;
             this.versionService = versionService;
         }
 
         public async Task<string> Get()
         {
-            var footer = await File.ReadAllTextAsync($"{config.Dir}/footer.json");
+            var footer = await dataService.ReadFile("footer");
             var version = await versionService.Get();
             return Patch(footer, version);
         }

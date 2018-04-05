@@ -1,4 +1,4 @@
-﻿namespace api.Settings
+﻿namespace api.Core
 {
     public class DataConfig
     {

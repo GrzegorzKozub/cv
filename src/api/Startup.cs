@@ -1,6 +1,6 @@
-﻿using api.Cv;
+﻿using api.Core;
+using api.Cv;
 using api.Footer;
-using api.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,6 +23,7 @@ namespace api
             services.AddOptions();
             services.Configure<DataConfig>(Configuration.GetSection(nameof(DataConfig)));
 
+            services.AddTransient<IDataService, DataService>();
             services.AddTransient<ICvService, CvService>();
             services.AddTransient<IFooterService, FooterService>();
             services.AddTransient<IVersionService, VersionService>();
