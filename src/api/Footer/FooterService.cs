@@ -26,7 +26,7 @@ namespace api.Footer
 
         public async Task<string> Get()
         {
-            var footer = await File.ReadAllTextAsync(config.FooterPath);
+            var footer = await File.ReadAllTextAsync($"{config.Dir}/footer.json");
             var version = await versionService.Get();
             return Patch(footer, version);
         }

@@ -18,6 +18,6 @@ namespace api.Cv
             this.config = config.Value;
 
         public Task<string> Get() =>
-            File.ReadAllTextAsync(config.CvPath);
+            File.ReadAllTextAsync($"{config.Dir}/cv.json");
     }
 }
