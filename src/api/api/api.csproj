@@ -16,5 +16,9 @@
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
   </ItemGroup>
-  
+
+  <Target Name="GenerateVersionFile" BeforeTargets="Build">
+    <Exec Command="git rev-parse --short HEAD &gt; version.txt" />
+  </Target>
+
 </Project>
