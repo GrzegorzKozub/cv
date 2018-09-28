@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace api.Cv
 {
     [Route("cv")]
-    public class CvController : Controller
+    [ApiController]
+    public class CvController : ControllerBase
     {
         private readonly ICvService service;
 

@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace api.Footer
 {
     [Route("footer")]
-    public class FooterController : Controller
+    [ApiController]
+    public class FooterController : ControllerBase
     {
         private readonly IFooterService service;
 
