@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 import { ProjectsByCompany } from '../../core/cv/cv';
 import { CvService } from '../../core/cv/cv.service';

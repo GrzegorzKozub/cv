@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { Observable, Subject } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 import { environment } from '../../../environments/environment';
 import { Footer } from './footer';
@@ -29,7 +29,7 @@ export class FooterService {
       this.cache = new Subject<Footer>();
       return <Observable<Footer>>this.http
         .get(environment.apiUrl + 'footer')
-        .do((footer: Footer) => this.cache.next(footer));
+        .pipe(tap((footer: Footer) => this.cache.next(footer)));
     }
   }
 }
