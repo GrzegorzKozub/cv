@@ -5,12 +5,6 @@ VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "api\api.csproj", "{68E62399-2B94-461A-97D8-98A180B29E33}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{744A3976-A08E-4FAB-94EB-58975ECE1F7C}"
-	ProjectSection(SolutionItems) = preProject
-		data\cv.json = data\cv.json
-		data\footer.json = data\footer.json
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
