@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <Target Name="GenerateVersionFile" BeforeTargets="Build">
-    <Exec Command="git rev-parse --short HEAD &gt; version.txt" />
+    <Exec Command="git rev-parse --short HEAD &gt; version.txt" ContinueOnError="true" />
   </Target>
 
 </Project>
