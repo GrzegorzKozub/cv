@@ -1,6 +1,6 @@
 import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 @Injectable()
@@ -13,7 +13,7 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
           if (err instanceof HttpErrorResponse) {
             alert(`Error ${err.status} ${err.statusText} while fetching data from ${err.url}`);
           }
-          return Observable.throw(err);
+          return throwError(err);
         })
       );
   }
