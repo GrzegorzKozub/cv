@@ -14,12 +14,12 @@ namespace api.Core
         {
             try
             {
-                var version = await File.ReadAllTextAsync("version.txt");
+                var version = await File.ReadAllTextAsync("version.txt").ConfigureAwait(false);
                 return version.Trim();
             }
             catch
             {
-                return await Task.FromResult(string.Empty);
+                return await Task.FromResult(string.Empty).ConfigureAwait(false);
             }
         }
     }

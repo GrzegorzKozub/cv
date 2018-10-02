@@ -24,8 +24,8 @@ namespace api.Footer
 
         public async Task<string> Get()
         {
-            var footer = await dataService.ReadFile("footer");
-            var version = await versionService.Get();
+            var footer = await dataService.ReadFile("footer").ConfigureAwait(false);
+            var version = await versionService.Get().ConfigureAwait(false);
             return Patch(footer, version);
         }
 

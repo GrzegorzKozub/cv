@@ -14,6 +14,6 @@ namespace api.Cv
 
         [HttpGet]
         public async Task<ContentResult> Get() =>
-            Content(await service.Get(), "application/json");
+            Content(await service.Get().ConfigureAwait(false), "application/json");
     }
 }
