@@ -1,0 +1,30 @@
+version: '3.5'
+
+networks:
+
+  net:
+    driver: bridge
+    name: cv
+
+services:
+
+  api:
+    image: cv_api
+    build:
+      context: src/api/api
+      dockerfile: Dockerfile
+    ports:
+      - '5000:80'
+    networks:
+      - net
+
+  web:
+    image: cv_web
+    build:
+      context: src/web
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+    networks:
+      - net
+
