@@ -28,3 +28,26 @@ services:
     networks:
       - net
 
+  pdf:
+    image: cv_pdf
+    build:
+      context: src/pdf
+      dockerfile: Dockerfile
+    networks:
+      - net
+    volumes:
+      - ./pdf:/root
+    depends_on:
+      - 'api'
+      - 'web'
+    command: [
+      'wkhtmltopdf',
+      '--footer-html', 'http://cv_web_1/footer',
+      '--javascript-delay', '750',
+      '--margin-bottom', '3cm',
+      '--margin-left', '1cm',
+      '--margin-right', '1cm',
+      '--margin-top', '1cm',
+      'http://cv_web_1/cv',
+      '/root/cv.pdf'
+    ]
