@@ -39,7 +39,7 @@ namespace api
             else
                 app.UseHsts();
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection(); // wkhmltopdf can't follow HTTP 307
             app.UseMvc();
         }
     }
