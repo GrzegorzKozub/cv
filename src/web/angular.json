@@ -20,7 +20,12 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*.min.js",
+                "input": "./node_modules/@babel/polyfill/dist",
+                "output": "/assets/@babel-polyfill/"
+              }
             ],
             "styles": [
               "src/styles.scss"
