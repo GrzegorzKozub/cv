@@ -1,8 +1,10 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { async, inject, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { inject, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Subject } from 'rxjs';
 
+import { environment } from '../../../environments/environment';
+import { footerFake } from './footer.fake';
 import { FooterService } from './footer.service';
 
 describe('FooterService', () => {
@@ -46,9 +48,16 @@ describe('FooterService', () => {
     }
   });
 
-  describe('getFooter', () => {
-    it('should return footer', async(inject([FooterService], (service: FooterService) => {
-      service.getFooter().subscribe(footer => expect(footer).toBeDefined());
-    })));
+  describe('http', () => {
+    describe('getFooter', () => {
+      it('should return footer', inject([FooterService], (service: FooterService) => {
+        service.getFooter().subscribe(actual => expect(actual).toEqual(footerFake));
+      }));
+    });
+
+    afterEach(inject([HttpTestingController], (http: HttpTestingController) => {
+      http.expectOne(environment.apiUrl + 'footer').flush(footerFake);
+      http.verify();
+    }));
   });
 });

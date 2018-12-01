@@ -1,6 +1,8 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { async, inject, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { inject, TestBed } from '@angular/core/testing';
 
+import { environment } from '../../../environments/environment';
+import { cvFake } from './cv.fake';
 import { CvService } from './cv.service';
 
 describe('CvService', () => {
@@ -15,39 +17,46 @@ describe('CvService', () => {
     expect(service).toBeTruthy();
   }));
 
-  describe('getHeader', () => {
-    it('should return header', async(inject([CvService], (service: CvService) => {
-      service.getHeader().subscribe(header => expect(header).toBeDefined());
-    })));
-  });
+  describe('http', () => {
+    describe('getHeader', () => {
+      it('should return header', inject([CvService], (service: CvService) => {
+        service.getHeader().subscribe(actual => expect(actual).toEqual(cvFake.header));
+      }));
+    });
 
-  describe('getRecentJob', () => {
-    it('should return recent job', async(inject([CvService], (service: CvService) => {
-      service.getRecentJob().subscribe(recentJob => expect(recentJob).toBeDefined());
-    })));
-  });
+    describe('getRecentJob', () => {
+      it('should return recent job', inject([CvService], (service: CvService) => {
+        service.getRecentJob().subscribe(actual => expect(actual).toEqual(cvFake.recentJob));
+      }));
+    });
 
-  describe('getPastJobs', () => {
-    it('should return past jobs', async(inject([CvService], (service: CvService) => {
-      service.getPastJobs().subscribe(pastJobs => expect(pastJobs).toBeDefined());
-    })));
-  });
+    describe('getPastJobs', () => {
+      it('should return past jobs', inject([CvService], (service: CvService) => {
+        service.getPastJobs().subscribe(actual => expect(actual).toEqual(cvFake.pastJobs));
+      }));
+    });
 
-  describe('getNotableProjects', () => {
-    it('should return notable projects', async(inject([CvService], (service: CvService) => {
-      service.getNotableProjects().subscribe(notableProjects => expect(notableProjects).toBeDefined());
-    })));
-  });
+    describe('getNotableProjects', () => {
+      it('should return notable projects', inject([CvService], (service: CvService) => {
+        service.getNotableProjects().subscribe(actual => expect(actual).toEqual(cvFake.notableProjects));
+      }));
+    });
 
-  describe('getSkills', () => {
-    it('should return skills', async(inject([CvService], (service: CvService) => {
-      service.getSkills().subscribe(skills => expect(skills).toBeDefined());
-    })));
-  });
+    describe('getSkills', () => {
+      it('should return skills', inject([CvService], (service: CvService) => {
+        service.getSkills().subscribe(actual => expect(actual).toEqual(cvFake.skills));
+      }));
+    });
 
-  describe('getEducation', () => {
-    it('should return education', async(inject([CvService], (service: CvService) => {
-      service.getEducation().subscribe(education => expect(education).toBeDefined());
-    })));
+    describe('getEducation', () => {
+      it('should return education', inject([CvService], (service: CvService) => {
+        service.getEducation().subscribe(actual => expect(actual).toEqual(cvFake.education));
+      }));
+    });
+
+    afterEach(inject([HttpTestingController], (http: HttpTestingController) => {
+      http.expectOne(environment.apiUrl + 'cv').flush(cvFake);
+      http.verify();
+    }));
   });
 });
