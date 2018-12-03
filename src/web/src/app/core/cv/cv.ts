@@ -12,7 +12,6 @@ export interface Header {
   title: string;
   kaizen: string;
   location: string;
-  phone: string;
   email: string;
   web: string;
   headline: string;

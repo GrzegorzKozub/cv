@@ -6,7 +6,6 @@ const cvFake = <Cv>{
     title: 'header.title',
     kaizen: 'header.kaizen',
     location: 'header.location',
-    phone: 'header.phone',
     email: 'header.email',
     web: 'header.web',
     headline: 'header.headline'
