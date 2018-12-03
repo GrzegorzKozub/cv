@@ -57,6 +57,7 @@ describe('FooterService', () => {
       it('should use cache', inject([FooterService], (service: FooterService) => {
         service.getFooter().subscribe();
         service.getFooter().subscribe();
+        expect().nothing();
       }));
     });
 

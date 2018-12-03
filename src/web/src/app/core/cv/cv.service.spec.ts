@@ -26,6 +26,7 @@ describe('CvService', () => {
       it('should use cache', inject([CvService], (service: CvService) => {
         service.getHeader().subscribe();
         service.getHeader().subscribe();
+        expect().nothing();
       }));
     });
 
@@ -37,6 +38,7 @@ describe('CvService', () => {
       it('should use cache', inject([CvService], (service: CvService) => {
         service.getRecentJob().subscribe();
         service.getRecentJob().subscribe();
+        expect().nothing();
       }));
     });
 
@@ -48,6 +50,7 @@ describe('CvService', () => {
       it('should use cache', inject([CvService], (service: CvService) => {
         service.getPastJobs().subscribe();
         service.getPastJobs().subscribe();
+        expect().nothing();
       }));
     });
 
@@ -59,6 +62,7 @@ describe('CvService', () => {
       it('should use cache', inject([CvService], (service: CvService) => {
         service.getNotableProjects().subscribe();
         service.getNotableProjects().subscribe();
+        expect().nothing();
       }));
     });
 
@@ -70,6 +74,7 @@ describe('CvService', () => {
       it('should use cache', inject([CvService], (service: CvService) => {
         service.getSkills().subscribe();
         service.getSkills().subscribe();
+        expect().nothing();
       }));
     });
 
@@ -81,6 +86,7 @@ describe('CvService', () => {
       it('should use cache', inject([CvService], (service: CvService) => {
         service.getEducation().subscribe();
         service.getEducation().subscribe();
+        expect().nothing();
       }));
     });
 
