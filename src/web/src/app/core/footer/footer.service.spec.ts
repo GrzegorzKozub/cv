@@ -53,6 +53,11 @@ describe('FooterService', () => {
       it('should return footer', inject([FooterService], (service: FooterService) => {
         service.getFooter().subscribe(actual => expect(actual).toEqual(footerFake));
       }));
+
+      it('should use cache', inject([FooterService], (service: FooterService) => {
+        service.getFooter().subscribe();
+        service.getFooter().subscribe();
+      }));
     });
 
     afterEach(inject([HttpTestingController], (http: HttpTestingController) => {
