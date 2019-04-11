@@ -6,37 +6,27 @@
     "location": "Warsaw, Poland",
     "email": "grzegorz.kozub@gmail.com",
     "web": "http://www.linkedin.com/in/grzegorzkozub",
-    "headline": "Arch, Dev and Ops by passion for technology. Always learning, keen on Microservices Architecture and Domain-Driven Design, aims to become a tech full-stack and a programming polyglot. Tech Lead and Team Lead by passion for people. Encourages teams to embrace the DevOps culture and work together according to Lean Principles."
+    "headline": "Developer, architect, generlist. Worked with Clean Architecture, Microservices and Domain-Driven Design but is still learning about them. Inspired by DevOps culture, leads Product Teams to design, integrate and deploy even smaller increments even faster."
   },
   "recentJob": {
     "company": {
-      "name": "Apsis International AB",
-      "sector": "Email marketing",
-      "profile": "Apsis offers solutions for email marketing, lead management and e-commerce focussed on Nordic and Asian markets currently supplying over 6000 clients including H&M and Ikea. Apsis Pro is an email marketing system that supports creating, testing, sending, automating and tracking emails and SMS. It also supports mailing list management. Individual send-outs vary from a single to a couple of million subscribers. Apsis Pro also has Event and Survey functionality. Apsis Integrations provides APIs with high-performance mailing list import support. On top of that they deliver integration with CRM systems."
+      "name": "Ivanti",
+      "sector": "IT",
+      "profile": "Ivanti offers solutions for IT asset and service management, identity and endpoint management, supply chain and security. Ivanti Cloud provides a centralized overview and management of an organization inventory as well as optimization and problem solving advice."
     },
     "titles": [
       {
-        "name": "Architect, Developer, Tech Lead and Team Leader",
-        "time": "July 2015 - September 2016 (1 year 3 months)",
-        "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, AngularJS, Git, TFS, Windows",
+        "name": "Developer, Architect, Tech Lead",
+        "time": "Since November 2017",
+        "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, Git, Azure DevOps, Azure Service Fabric, PowerShell",
         "roles": [
-          "As part of Architecture Team I was designing technical solutions for Apsis Pro and Integrations using Domain-Driven Design. Some of them were enhancements to an existing legacy ASP.Net MVC code and some were greenfield designs that were then implemented as AngularJS front-end and ASP.Net WebAPI back-end. I was also involved in technical designs for public REST API improvements, high volume importer performance optimization and push integration rewrite. I took part in choosing the technology that was later used for implementation. My responsibilities were to ensure compatibility with the existing system while allowing high performance, good security, maintainability and deployment story.",
-          "As a Tech Lead, I provided mentoring about in-house solutions, architecture and infrastructure. I was approving various implementation choices like database design, libraries, infrastructure alignment etc. I helped developers writing clean and maintainable code that keeps all the SOLID Principles, is properly Unit-Tested and designed according to Apsis DDD Guidance and Coding Standard. I was involved in teaching developers how to conduct a productive Code Review.",
-          "As emerging DevOps culture in Apsis was one of my main focuses, I co-authored the Release Process to ensure quick and safe updates to production. I then became the Release Manager. I was co-ordinating release testing and live deployment. We used Git, TFS and Release Management for CI. I also helped maintaining and growing production, staging and development infrastructure implemented as VMs on various cloud computing providers.",
-          "Never lost that passion for code, so I still contributed the development and maintenance of multiple web apps, APIs and integration solutions.",
-          "I co-designed and took part in On-Call Process that is a 24/7 developer and admin support that improves stability and availability of Apsis Pro and Integrations.",
-          "I was given a pleasure of leading a team of 5 great developers in Warsaw. I helped them plan their projects and made sure the have no obstacles. We used our interpretation of Scrum for bigger, more plannable implementations and Kanban for maintenance. I kept track of my teammates work and was responsible for performance reviews and bonuses. I was also interviewing new hires.",
-          "Finally, I represented the company in Poland and managed the office in Warsaw."
-        ]
-      },
-      {
-        "name": "Software Developer",
-        "time": "September 2012 - June 2015 (2 year 10 months)",
-        "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, Ruby, PowerShell, Windows",
-        "roles": [
-          "I started with Apsis as a developer by joining the Maintenance Team and exploring the system and its codebase by fixing bugs. Later I was assigned to projects that added functionality to Apsis Pro and Integrations.",
-          "The code I was exposed to consisted mostly of legacy ASP.Net and ASP.Net MVC web apps with a considerable amount of front-end code in JavaScript using jQuery. Later I had an opportunity to change the background processing apps among which builders taking care of rendering and sending the emails and NServiceBus-based message processors are most noteworthy. Finally I got to write code in public REST API and mailing list importers. I was also involved in changing legacy T-SQL stored procedures.",
-          "When a proper Continuous Integration turned out to be needed, together with a consultant hired for this purpose I was coding an in-house, custom deployment solution in Ruby and PowerShell."
+          "My first goal was to lead my team to take the ownership of License Optimizer, a legacy product for establishing specific vendor software license position for our customers that is a SaaS offering written in .Net and deployed as monolith. While learning about the domain, we identified the architecture as well as the technical debts we had tackled immediately.",
+          "Most importantly, we added database sharding and replication, removed manual tests in favour of automated test suite, created the deployment pipeline up to production including database migrations. All that while adding value for the customers by making changes and fixing bugs.",
+          "As a result, License Optimizer is now scalable and ready to accept customers from different regions. Product Team can integrate changes quicker and without significant risk of introducing bugs. Quarterly, manual release with 1 hour downtime became weekly, automated deployment with 5 minutes of unavailability.",
+          "Moving forward with License Optimizer adoption, we got a chance to integrate it with Ivanti Cloud. First, we tackled tenant management automation. Then we identified and started extracting some Bounded Contexts from legacy monolith to Ivanti Cloud.",
+          "Following the scalability drivers, on deployment level we based our microservices on Service Fabric and communicated them asynchronously with events. Inside the components we opted for Ports and Adapters which decoupled the domain logic from the infrastructure code. We also put considerable effort on Integration Tests harness.",
+          "As a result, different License Optimizer capabilities are ready to continue their migration to Ivanti Cloud to make the product more scalable and flexible in regards to offering.",
+          "I am very happy that we attempted to grow the product following the ways described in the book Inspired by Marty Cagan, that is by using different Product Discovery techniques involving our customers."
         ]
       }
     ]
@@ -44,28 +34,61 @@
   "pastJobs": [
     {
       "company": {
+        "name": "Apsis International AB"
+      },
+      "titles": [
+        {
+          "name": "Developer, Architect, Tech Lead, Team Leader",
+          "sector": "Email marketing",
+          "time": "July 2015 - September 2016 (1 year 3 months)",
+          "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, AngularJS, Git, TFS",
+          "roles": [
+            "Design architecture changes for Apsis Pro, a SaaS email marketing product",
+            "Modernize the public REST API",
+            "Improve performance of the high volume mailing list import solution and CRM integration",
+            "Contribute to .NET and AngularJS codebase",
+            "Co-author the Release Process for small and frequent deployments and take the Release Manager role",
+            "Co-design and take part in the On-Call Process",
+            "Maintain and grow the infrastructure",
+            "Give programming, architecture and infrastructure guidance",
+            "With utmost pleasure, lead a team of 5 great developers in Warsaw"
+          ]
+        },
+        {
+          "name": "Developer",
+          "sector": "Email marketing",
+          "time": "September 2012 - June 2015 (2 year 10 months)",
+          "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, Ruby, PowerShell",
+          "roles": [
+            "Fix bugs in Apsis Pro, a SaaS email marketing product",
+            "Contribute to the codebase of builders for rendering and sending emails, high volume mailing list importers and public REST API",
+            "Develop the in-house deployment pipeline using Ruby and PowerShell"
+          ]
+        }
+      ]
+    },
+    {
+      "company": {
         "name": "Hewlett Packard Enterprise"
       },
       "titles": [
         {
-          "name": "Tech Lead and Software Developer at Microsoft Practice",
+          "name": "Developer, Tech Lead",
           "sector": "Public administration",
           "time": "January 2010 - August 2012 (2 years 8 months)",
-          "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, Digital Certificates, Windows",
+          "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, Digital Certificates",
           "roles": [
-            "Maintain and develop web and desktop apps",
-            "Implement transport security, authentication and authorization for sensitive web services",
-            "Provide consultancy for Microsoft technology stack and web technology",
-            "Be a Tech Lead for an agile development team following Scrum"
+            "Develop desktop apps, web apps and APIs in .NET",
+            "Give technical guidance"
           ]
         },
         {
-          "name": "Banking Multi-channel Front-end Developer",
+          "name": "Developer",
           "sector": "Banking",
           "time": "March 2009 - December 2009 (10 months)",
           "tech": ".NET, C#, XHTML, XSLT, Oracle, PL/SQL, JavaScript, Shell Scripting, UNIX",
           "roles": [
-            "Develop fixes and changes for a multi-technology web app",
+            "Fix bugs in a banking web app with JavaScript front-end and back-end",
             "Design and implement reports with UNIX Shell and PL/SQL"
           ]
         }
@@ -77,31 +100,31 @@
       },
       "titles": [
         {
-          "name": "Defect and Release Management Technical Support",
+          "name": "Programmer",
           "sector": "Banking",
           "time": "September 2006 - November 2008 (2 years 3 months)",
-          "tech": "Quality Center, QuickTest Professional, Excel, Visual Basic for Applications, Windows",
+          "tech": "Quality Center, QuickTest Professional, Excel, Visual Basic for Applications",
           "roles": [
-            "Plan, develop and support Defect and Release Management Process for a large system implementation",
-            "Design and program automated Excel-based tools for Defect and Release Management Process"
+            "Design Defect and Release Management for a banking system",
+            "Automate reporting in Excel using Visual Basic"
           ]
         },
         {
-          "name": "Digital Workflow Data SME",
+          "name": "Programmer",
           "sector": "Food",
           "time": "June 2006 - August 2006 (3 months)",
           "tech": "AssetCenter, ServiceCenter, Sybase, SQL, Shell Scripting, UNIX",
           "roles": [
-            "Process data using an ITIL-based Asset and Problem Management solution called Digital Workflow"
+            "Process data using Digital Workflow, an ITIL-based Asset and Problem Management product"
           ]
         },
         {
-          "name": "Migration Technical Tester and Technical Solution Analyst",
-          "sector": "Telecommunications",
+          "name": "Tester",
+          "sector": "Telecom",
           "time": "October 2004 - May 2006 (1 year 8 months)",
           "tech": "PowerCenter, Oracle, PL/SQL, Shell Scripting, UNIX",
           "roles": [
-            "Analyze, design and provide integration testing for a migration solution"
+            "Design integration testing for a telecom system migration"
           ]
         }
       ]
@@ -148,7 +171,7 @@
       "category": "Design and implementation",
       "skills": [
         {
-          "name": "System architecture design",
+          "name": "Architecture design",
           "summary": "I have experience in designing application architecture using Domain-Driven Design. I compose apps as domains in DDD sense. I know how to structure web app front-end and back-end as well communicate them via HTTP. I design public REST APIs and background processing apps that talk over HTTP or messages. I contribute to database design and know about how to optimize SQL Server queries for performance. I make sure proper security gets into technical requirements and is implemented. I can suggest technology for implementation. My current learning focus is everything related to Microservices Architecture."
         },
         {
@@ -166,7 +189,7 @@
       "skills": [
         {
           "name": "Perceive DevOps as organization culture",
-          "summary": "I have knowledge about Continuous Integration and Delivery processes and tools. I know git well and used git-flow in my work. I have been using TFS for builds and Release Management for deployment although I prefer a PowerShell script over a Release Management workflow. I have work experience with configuring IIS web server. I contribute to system infrastructure design involving app deployment, scaling out and inter-communication. I've been structuring systems using VMs and now learning about containers. Mostly however, to me, DevOps is a culture I like to promote and aim for people I work with and myself to get better at The Three Ways."
+          "summary": "I have knowledge about Continuous Integration and Delivery processes and tools. I know git well and used git-flow in my work. I have been using TFS for builds and Release Management for deployment although I prefer a PowerShell script over a Release Management workflow. I have work experience with configuring IIS web server. I contribute to infrastructure design involving app deployment, scaling out and inter-communication. I've been structuring systems using VMs and now learning about containers. Mostly however, to me, DevOps is a culture I like to promote and aim for people I work with and myself to get better at The Three Ways."
         },
         {
           "name": "Focus on simple, clean and maintainable code",
