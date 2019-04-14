@@ -7,7 +7,6 @@
     <div class="section" *ngFor="let title of recentJob.titles">
       <app-title [value]="title.name"></app-title>
       <app-content [value]="title.time"></app-content>
-      <app-content [value]="title.tech"></app-content>
       <app-content [value]="title.roles" [asParagraphs]="true"></app-content>
     </div>
   </div>

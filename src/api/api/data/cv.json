@@ -18,7 +18,6 @@
       {
         "name": "Developer, Architect, Tech Lead",
         "time": "Since November 2017",
-        "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, Git, Azure DevOps, Azure Service Fabric, PowerShell",
         "roles": [
           "My first goal was to lead my team to take the ownership of License Optimizer, a legacy product for establishing specific vendor software license position for our customers that is a SaaS offering written in .Net and deployed as monolith. While learning about the domain, we identified the architecture as well as the technical debts we had tackled immediately.",
           "Most importantly, we added database sharding and replication, removed manual tests in favour of automated test suite, created the deployment pipeline up to production including database migrations. All that while adding value for the customers by making changes and fixing bugs.",
@@ -41,7 +40,6 @@
           "name": "Developer, Architect, Tech Lead, Team Leader",
           "sector": "Email marketing",
           "time": "July 2015 - September 2016 (1 year 3 months)",
-          "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, AngularJS, Git, TFS",
           "roles": [
             "Design architecture changes for Apsis Pro, a SaaS email marketing product",
             "Modernize the public REST API",
@@ -58,7 +56,6 @@
           "name": "Developer",
           "sector": "Email marketing",
           "time": "September 2012 - June 2015 (2 year 10 months)",
-          "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, Ruby, PowerShell",
           "roles": [
             "Fix bugs in Apsis Pro, a SaaS email marketing product",
             "Contribute to the codebase of builders for rendering and sending emails, high volume mailing list importers and public REST API",
@@ -76,7 +73,6 @@
           "name": "Developer, Tech Lead",
           "sector": "Public administration",
           "time": "January 2010 - August 2012 (2 years 8 months)",
-          "tech": ".NET, C#, ASP.Net, SQL Server, T-SQL, JavaScript, Digital Certificates",
           "roles": [
             "Develop desktop apps, web apps and APIs in .NET",
             "Give technical guidance"
@@ -86,7 +82,6 @@
           "name": "Developer",
           "sector": "Banking",
           "time": "March 2009 - December 2009 (10 months)",
-          "tech": ".NET, C#, XHTML, XSLT, Oracle, PL/SQL, JavaScript, Shell Scripting, UNIX",
           "roles": [
             "Fix bugs in a banking web app with JavaScript front-end and back-end",
             "Design and implement reports with UNIX Shell and PL/SQL"
@@ -103,7 +98,6 @@
           "name": "Programmer",
           "sector": "Banking",
           "time": "September 2006 - November 2008 (2 years 3 months)",
-          "tech": "Quality Center, QuickTest Professional, Excel, Visual Basic for Applications",
           "roles": [
             "Design Defect and Release Management for a banking system",
             "Automate reporting in Excel using Visual Basic"
@@ -113,7 +107,6 @@
           "name": "Programmer",
           "sector": "Food",
           "time": "June 2006 - August 2006 (3 months)",
-          "tech": "AssetCenter, ServiceCenter, Sybase, SQL, Shell Scripting, UNIX",
           "roles": [
             "Process data using Digital Workflow, an ITIL-based Asset and Problem Management product"
           ]
@@ -122,7 +115,6 @@
           "name": "Tester",
           "sector": "Telecom",
           "time": "October 2004 - May 2006 (1 year 8 months)",
-          "tech": "PowerCenter, Oracle, PL/SQL, Shell Scripting, UNIX",
           "roles": [
             "Design integration testing for a telecom system migration"
           ]

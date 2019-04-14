@@ -42,7 +42,6 @@ export interface Title {
   name: string;
   sector: string | undefined;
   time: string;
-  tech: string;
   roles: string[];
 }
 
