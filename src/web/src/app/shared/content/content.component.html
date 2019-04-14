@@ -1,20 +1,13 @@
 <div class="content">
-  <div class="label">{{ label }}</div>
-  <div class="value">
-
-    <ng-container *ngIf="asBullets; else tryParagraphs">
-      <ul>
-        <li *ngFor="let bullet of value">{{ bullet }}</li>
-      </ul>
+  <ng-container *ngIf="asBullets; else tryParagraphs">
+    <ul>
+      <li *ngFor="let bullet of value">{{ bullet }}</li>
+    </ul>
+  </ng-container>
+  <ng-template #tryParagraphs>
+    <ng-container *ngIf="asParagraphs; else justValue">
+      <p *ngFor="let paragraph of value">{{ paragraph }}</p>
     </ng-container>
-
-    <ng-template #tryParagraphs>
-      <ng-container *ngIf="asParagraphs; else justValue">
-        <p *ngFor="let paragraph of value">{{ paragraph }}</p>
-      </ng-container>
-    </ng-template>
-
-    <ng-template #justValue>{{ value }}</ng-template>
-
-  </div>
+  </ng-template>
+  <ng-template #justValue>{{ value }}</ng-template>
 </div>

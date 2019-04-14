@@ -1,15 +1,11 @@
 <div class="article" id="notable-projects" *ngIf="model | async as notableProjects">
   <app-title value="notable projects"></app-title>
-
   <div class="chapter" *ngFor="let notableProject of notableProjects">
-    <app-title label="company" [value]="notableProject.company.name"></app-title>
-
+    <app-title [value]="notableProject.company.name"></app-title>
     <div class="section" *ngFor="let project of notableProject.projects">
-      <app-title label="project" [value]="project.name"></app-title>
-
-      <app-content label="time" [value]="project.time"></app-content>
-      <app-content label="summary" [value]="project.summary"></app-content>
-
+      <app-title [value]="project.name"></app-title>
+      <app-content [value]="project.time"></app-content>
+      <app-content [value]="project.summary"></app-content>
     </div>
   </div>
 </div>

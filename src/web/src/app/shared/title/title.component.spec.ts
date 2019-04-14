@@ -23,25 +23,10 @@ describe('TitleComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should show value as text when no label', () => {
+  it('should show value', () => {
     component.value = 'value';
     fixture.detectChanges();
-    const label = getView(fixture, '.title .label');
-    expect(label).toBeNull();
-    const value = getView(fixture, '.title .value');
-    expect(value).toBeNull();
-    const view = getView(fixture, '.title');
-    expect(view).not.toContain('label');
-    expect(view).toContain('value');
-  });
-
-  it('should show label and value in divs when label given', () => {
-    component.label = 'label';
-    component.value = 'value';
-    fixture.detectChanges();
-    const label = getView(fixture, '.title .label');
-    expect(label).toEqual('label');
-    const value = getView(fixture, '.title .value');
+    const value = getView(fixture, '.title');
     expect(value).toEqual('value');
   });
 });

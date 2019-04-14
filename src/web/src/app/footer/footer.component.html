@@ -1,13 +1,10 @@
 <div class="footer" id="footer" *ngIf="model | async as footer">
-
   <div class="disclaimer" [style.visibility]="page.last ? 'visible' : 'hidden'">
     {{ footer.disclaimer }}
   </div>
-
   <div class="page">
     <span class="left"></span>
     <span class="center">- {{ page.number }} -</span>
     <span class="right">{{ footer.version }}</span>
   </div>
-
 </div>

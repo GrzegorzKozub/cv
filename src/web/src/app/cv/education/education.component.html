@@ -1,17 +1,13 @@
 <div class="article" id="education" *ngIf="model | async as education">
   <app-title value="education"></app-title>
-
   <div class="chapter" *ngFor="let e of education">
-    <app-title label="school" [value]="e.school"></app-title>
-
+    <app-title [value]="e.school"></app-title>
     <div class="section" *ngFor="let school of e.studies">
-      <app-title label="faculty" [value]="school.faculty"></app-title>
-
-      <app-content label="major" [value]="school.major"></app-content>
-      <app-content label="time" [value]="school.time"></app-content>
-      <app-content label="thesis" [value]="school.thesis"></app-content>
-      <app-content label="grades" [value]="school.grades"></app-content>
-
+      <app-title [value]="school.faculty"></app-title>
+      <app-content [value]="school.major"></app-content>
+      <app-content [value]="school.time"></app-content>
+      <app-content [value]="school.thesis"></app-content>
+      <app-content [value]="school.grades"></app-content>
     </div>
   </div>
 </div>

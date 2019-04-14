@@ -1,11 +1,9 @@
 <div class="header" id="header" *ngIf="model | async as header">
-
   <div class="left">
     <div class="name">{{ header.name }}</div>
     <div class="title">{{ header.title }}</div>
     <div class="kaizen">{{ header.kaizen }}</div>
   </div>
-
   <div class="right">
     <div>{{ header.location }}</div>
     <div>
@@ -15,7 +13,5 @@
       <a href="{{ header.web }}">{{ header.web }}</a>
     </div>
   </div>
-
   <div class="headline">{{ header.headline }}</div>
-
 </div>

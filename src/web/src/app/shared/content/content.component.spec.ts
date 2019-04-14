@@ -23,17 +23,10 @@ describe('ContentComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should always show label', () => {
-    component.label = 'label';
-    fixture.detectChanges();
-    const label = getView(fixture, '.content .label');
-    expect(label).toEqual('label');
-  });
-
   it('should show value as text when no display preference', () => {
     component.value = 'value';
     fixture.detectChanges();
-    const value = getView(fixture, '.content .value');
+    const value = getView(fixture, '.content');
     expect(value).toEqual('value');
   });
 
@@ -41,7 +34,7 @@ describe('ContentComponent', () => {
     component.value = ['value'];
     component.asBullets = true;
     fixture.detectChanges();
-    const value = getView(fixture, '.content .value ul li');
+    const value = getView(fixture, '.content ul li');
     expect(value).toEqual('value');
   });
 
@@ -49,7 +42,7 @@ describe('ContentComponent', () => {
     component.value = ['value'];
     component.asParagraphs = true;
     fixture.detectChanges();
-    const value = getView(fixture, '.content .value p');
+    const value = getView(fixture, '.content p');
     expect(value).toEqual('value');
   });
 });

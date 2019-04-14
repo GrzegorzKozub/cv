@@ -6,7 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent {
-  @Input() label: string;
   @Input() value: string | string[];
   @Input() asBullets: boolean;
   @Input() asParagraphs: boolean;

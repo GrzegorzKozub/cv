@@ -86,7 +86,6 @@ body {
     @include space-big();
     @include font-big();
     @include color-gray();
-    font-weight: bold;
   }
 
   .chapter {
@@ -112,19 +111,6 @@ body {
   .content {
     @include pull-clear();
     @include space-small();
-  }
-
-  .label {
-    @include pull-left();
-    @include font-normal();
-    @include color-gray();
-    vertical-align: bottom;
-    width: 20%;
-  }
-
-  .value {
-    @include pull-right();
-    width: 80%;
   }
 }
 

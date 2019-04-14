@@ -1,17 +1,13 @@
 <div class="article" id="past-jobs" *ngIf="model | async as pastJobs">
   <app-title value="past jobs"></app-title>
-
   <div class="chapter" *ngFor="let pastJob of pastJobs">
-    <app-title label="company" [value]="pastJob.company.name"></app-title>
-
+    <app-title [value]="pastJob.company.name"></app-title>
     <div class="section" *ngFor="let title of pastJob.titles">
-      <app-title label="title" [value]="title.name"></app-title>
-
-      <app-content label="sector" [value]="title.sector"></app-content>
-      <app-content label="time" [value]="title.time"></app-content>
-      <app-content label="tech" [value]="title.tech"></app-content>
-      <app-content label="roles" [value]="title.roles" [asBullets]="true"></app-content>
-
+      <app-title [value]="title.name"></app-title>
+      <app-content [value]="title.sector"></app-content>
+      <app-content [value]="title.time"></app-content>
+      <app-content [value]="title.tech"></app-content>
+      <app-content [value]="title.roles" [asBullets]="true"></app-content>
     </div>
   </div>
 </div>
