@@ -73,9 +73,7 @@ const cvFake = <Cv>{
         {
           faculty: 'education[0].studies[0].faculty',
           major: 'education[0].studies[0].major',
-          time: 'education[0].studies[0].time',
-          thesis: 'education[0].studies[0].thesis',
-          grades: 'education[0].studies[0].grades'
+          time: 'education[0].studies[0].time'
         }
       ]
     }

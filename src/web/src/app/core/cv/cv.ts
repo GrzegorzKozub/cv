@@ -66,6 +66,4 @@ export interface Study {
   faculty: string;
   major: string;
   time: string;
-  thesis: string;
-  grades: string;
 }
