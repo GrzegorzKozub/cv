@@ -7,7 +7,7 @@
     "email": "grzegorz.kozub@gmail.com",
     "linkedin": "linkedin.com/in/grzegorzkozub",
     "github": "github.com/grzegorzkozub",
-    "headline": "Developer and architect. Generalist exploring Domain-Driven Design, Clean Architecture and Microservices. Inspired by DevOps culture, leads Product Teams to design, integrate and deploy small increments frequently to production."
+    "headline": "Developer and architect. Generalist exploring Domain-Driven Design, Clean Architecture and Microservices. Inspired by DevOps culture, encourages Product Teams to design, integrate and deploy small increments frequently to production."
   },
   "skills": [
     {
@@ -48,6 +48,14 @@
         "React (learning)",
         "SQL Server",
         "TypeScript"
+      ]
+    },
+    {
+      "category": "Soft",
+      "tags": [
+        "DevOps Culture",
+        "Product Discovery",
+        "Team Leadership"
       ]
     }
   ],
