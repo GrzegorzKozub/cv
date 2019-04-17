@@ -53,7 +53,6 @@
   "recentJob": {
     "company": {
       "name": "Ivanti",
-      "sector": "IT",
       "profile": "Ivanti offers solutions for IT asset and service management, identity and endpoint management, supply chain and security. Ivanti Cloud provides a centralized overview and management of an organization inventory as well as optimization and problem solving advice."
     },
     "titles": [
@@ -80,7 +79,6 @@
       "titles": [
         {
           "name": "Developer, Architect, Tech Lead, Team Leader",
-          "sector": "Email marketing",
           "time": "July 2015 - September 2016 (1 year 3 months)",
           "roles": [
             "Design architecture changes for Apsis Pro, a SaaS email marketing product",
@@ -96,7 +94,6 @@
         },
         {
           "name": "Developer",
-          "sector": "Email marketing",
           "time": "September 2012 - June 2015 (2 year 10 months)",
           "roles": [
             "Fix bugs in Apsis Pro, a SaaS email marketing product",
@@ -113,16 +110,14 @@
       "titles": [
         {
           "name": "Developer, Tech Lead",
-          "sector": "Public administration",
           "time": "January 2010 - August 2012 (2 years 8 months)",
           "roles": [
-            "Develop desktop apps, web apps and APIs in .Net",
+            "Develop desktop apps, web apps and APIs in .Net for public administration",
             "Give technical guidance"
           ]
         },
         {
           "name": "Developer",
-          "sector": "Banking",
           "time": "March 2009 - December 2009 (10 months)",
           "roles": [
             "Fix bugs in a banking web app with JavaScript front-end and back-end",
@@ -138,7 +133,6 @@
       "titles": [
         {
           "name": "Programmer",
-          "sector": "Banking",
           "time": "September 2006 - November 2008 (2 years 3 months)",
           "roles": [
             "Design Defect and Release Management for a banking system",
@@ -147,7 +141,6 @@
         },
         {
           "name": "Programmer",
-          "sector": "Food",
           "time": "June 2006 - August 2006 (3 months)",
           "roles": [
             "Process data using Digital Workflow, an ITIL-based Asset and Problem Management product"
@@ -155,7 +148,6 @@
         },
         {
           "name": "Tester",
-          "sector": "Telecom",
           "time": "October 2004 - May 2006 (1 year 8 months)",
           "roles": [
             "Design integration testing for a telecom system migration"

@@ -34,13 +34,11 @@ export interface ProjectsByCompany {
 
 export interface Company {
   name: string;
-  sector: string | undefined;
   profile: string | undefined;
 }
 
 export interface Title {
   name: string;
-  sector: string | undefined;
   time: string;
   roles: string[];
 }

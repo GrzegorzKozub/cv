@@ -2,7 +2,6 @@
   <app-title value="recent job"></app-title>
   <div class="chapter">
     <app-title [value]="recentJob.company.name"></app-title>
-    <app-content [value]="recentJob.company.sector"></app-content>
     <app-content [value]="recentJob.company.profile"></app-content>
     <div class="section" *ngFor="let title of recentJob.titles">
       <app-title [value]="title.name"></app-title>

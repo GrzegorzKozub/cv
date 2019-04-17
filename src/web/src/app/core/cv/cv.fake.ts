@@ -19,7 +19,6 @@ const cvFake = <Cv>{
   recentJob: {
     company: {
       name: 'recentJob.company.name',
-      sector: 'recentJob.company.sector',
       profile: 'recentJob.company.profile'
     },
     titles: [
@@ -38,7 +37,6 @@ const cvFake = <Cv>{
       titles: [
         {
           name: 'pastJobs[0].titles[0].name',
-          sector: 'pastJobs[0].titles[0].sector',
           time: 'pastJobs[0].titles[0].time',
           roles: ['pastJobs[0].titles[0].roles[0]']
         }
