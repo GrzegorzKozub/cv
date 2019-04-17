@@ -4,7 +4,7 @@ import { Observable, Subject } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
 import { environment } from '../../../environments/environment';
-import { Cv, Education, Header, Job, ProjectsByCompany, SkillsByCategory } from './cv';
+import { Cv, Education, Header, Job, ProjectsByCompany, Skill } from './cv';
 
 @Injectable()
 export class CvService {
@@ -14,6 +14,10 @@ export class CvService {
 
   getHeader(): Observable<Header> {
     return this.getCv().pipe(map(cv => cv.header));
+  }
+
+  getSkills(): Observable<Skill[]> {
+    return this.getCv().pipe(map(cv => cv.skills));
   }
 
   getRecentJob(): Observable<Job> {
@@ -26,10 +30,6 @@ export class CvService {
 
   getNotableProjects(): Observable<ProjectsByCompany[]> {
     return this.getCv().pipe(map(cv => cv.notableProjects));
-  }
-
-  getSkills(): Observable<SkillsByCategory[]> {
-    return this.getCv().pipe(map(cv => cv.skills));
   }
 
   getEducation(): Observable<Education[]> {

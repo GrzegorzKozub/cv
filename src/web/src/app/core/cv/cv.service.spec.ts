@@ -66,18 +66,6 @@ describe('CvService', () => {
       }));
     });
 
-    describe('getSkills', () => {
-      it('should return skills', inject([CvService], (service: CvService) => {
-        service.getSkills().subscribe(actual => expect(actual).toEqual(cvFake.skills));
-      }));
-
-      it('should use cache', inject([CvService], (service: CvService) => {
-        service.getSkills().subscribe();
-        service.getSkills().subscribe();
-        expect().nothing();
-      }));
-    });
-
     describe('getEducation', () => {
       it('should return education', inject([CvService], (service: CvService) => {
         service.getEducation().subscribe(actual => expect(actual).toEqual(cvFake.education));

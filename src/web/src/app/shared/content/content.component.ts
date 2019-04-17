@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ContentComponent {
   @Input() value: string | string[];
   @Input() asBullets: boolean;
+  @Input() asTags: boolean;
   @Input() asParagraphs: boolean;
 }

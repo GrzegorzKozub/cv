@@ -5,9 +5,14 @@ const expectModelInView = (model: Object, view: any) => {
   Object.keys(model).forEach(prop => expect(view).toContain(model[prop]));
 };
 
-const getView = (fixture: ComponentFixture<any>, css: string): any => {
+const getElement = (fixture: ComponentFixture<any>, css: string): any => {
   const found = fixture.debugElement.query(By.css(css));
-  return found ? found.nativeElement.textContent.trim() : null;
+  return found ? found.nativeElement : null;
 };
 
-export { expectModelInView, getView };
+const getView = (fixture: ComponentFixture<any>, css: string): any => {
+  const found = getElement(fixture, css);
+  return found ? found.textContent.trim() : null;
+};
+
+export { expectModelInView, getElement, getView };

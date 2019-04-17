@@ -2,9 +2,6 @@
   <app-title value="skills"></app-title>
   <div class="chapter" *ngFor="let skill of skills">
     <app-title [value]="skill.category"></app-title>
-    <div class="section" *ngFor="let s of skill.skills">
-      <app-title [value]="s.name"></app-title>
-      <app-content [value]="s.summary"></app-content>
-    </div>
+    <app-content [value]="skill.tags" [asTags]="true"></app-content>
   </div>
 </div>

@@ -14,10 +14,10 @@ import { SkillsComponent } from './skills/skills.component';
   declarations: [
     CvComponent,
     HeaderComponent,
+    SkillsComponent,
     RecentJobComponent,
     PastJobsComponent,
     NotableProjectsComponent,
-    SkillsComponent,
     EducationComponent
   ],
   exports: [CvComponent]

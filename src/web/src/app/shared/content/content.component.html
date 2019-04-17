@@ -1,7 +1,7 @@
 <div class="content">
-  <ng-container *ngIf="asBullets; else tryParagraphs">
-    <ul>
-      <li *ngFor="let bullet of value">{{ bullet }}</li>
+  <ng-container *ngIf="asBullets || asTags; else tryParagraphs">
+    <ul [className]="asTags ? 'tags' : ''">
+      <li *ngFor="let item of value">{{ item }}</li>
     </ul>
   </ng-container>
   <ng-template #tryParagraphs>

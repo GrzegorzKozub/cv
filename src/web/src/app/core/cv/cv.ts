@@ -1,9 +1,9 @@
 export interface Cv {
   header: Header;
+  skills: Skill[];
   recentJob: Job;
   pastJobs: Job[];
   notableProjects: ProjectsByCompany[];
-  skills: SkillsByCategory[];
   education: Education[];
 }
 
@@ -17,6 +17,11 @@ export interface Header {
   headline: string;
 }
 
+export interface Skill {
+  category: string;
+  tags: string[];
+}
+
 export interface Job {
   company: Company;
   titles: Title[];
@@ -25,11 +30,6 @@ export interface Job {
 export interface ProjectsByCompany {
   company: Company;
   projects: Project[];
-}
-
-export interface SkillsByCategory {
-  category: string;
-  skills: Skill[];
 }
 
 export interface Company {
@@ -48,11 +48,6 @@ export interface Title {
 export interface Project {
   name: string;
   time: string;
-  summary: string;
-}
-
-export interface Skill {
-  name: string;
   summary: string;
 }
 

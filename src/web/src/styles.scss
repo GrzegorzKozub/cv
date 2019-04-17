@@ -49,6 +49,19 @@ body {
   }
 }
 
+.columns {
+  float: left;
+
+  &.margin {
+    margin-right: 4%;
+    width: 32%;
+  }
+
+  &.main {
+    width: 64%;
+  }
+}
+
 .header {
   .left {
     @include pull-left();
@@ -89,7 +102,7 @@ body {
   }
 
   .chapter {
-    @include pull-clear();
+  @include pull-clear();
 
     .title {
       @include space-medium();
@@ -98,7 +111,7 @@ body {
     }
 
     .section {
-    @include pull-clear();
+  @include pull-clear();
 
       .title {
         @include space-normal();
@@ -111,6 +124,11 @@ body {
   .content {
     @include pull-clear();
     @include space-small();
+
+    .tags {
+      list-style: none;
+      padding-left: 0;
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 
-import { SkillsByCategory } from '../../core/cv/cv';
+import { Skill } from '../../core/cv/cv';
 import { CvService } from '../../core/cv/cv.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { CvService } from '../../core/cv/cv.service';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  model = new Subject<SkillsByCategory[]>();
+  model = new Subject<Skill[]>();
 
   constructor(private cvService: CvService) { }
 

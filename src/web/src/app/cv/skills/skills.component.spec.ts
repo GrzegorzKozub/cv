@@ -44,7 +44,7 @@ describe('SkillsComponent', () => {
         fixture.detectChanges();
         const view = getView(fixture, '#skills');
         expectModelInView(cvFake.skills[0].category, view);
-        expectModelInView(cvFake.skills[0].skills[0], view);
+        expectModelInView(cvFake.skills[0].tags[0], view);
       });
       component.ngOnInit();
     }));

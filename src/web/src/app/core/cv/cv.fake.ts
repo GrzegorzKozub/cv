@@ -10,6 +10,12 @@ const cvFake = <Cv>{
     web: 'header.web',
     headline: 'header.headline'
   },
+  skills: [
+    {
+      category: 'skills[0].category',
+      tags: ['skills[0].tags[0]']
+    }
+  ],
   recentJob: {
     company: {
       name: 'recentJob.company.name',
@@ -49,17 +55,6 @@ const cvFake = <Cv>{
           name: 'notableProjects[0].projects[0].name',
           time: 'notableProjects[0].projects[0].time',
           summary: 'notableProjects[0].projects[0].summary'
-        }
-      ]
-    }
-  ],
-  skills: [
-    {
-      category: 'skills[0].category',
-      skills: [
-        {
-          name: 'skills[0].skills[0].name',
-          summary: 'skills[0].skills[0].summary'
         }
       ]
     }

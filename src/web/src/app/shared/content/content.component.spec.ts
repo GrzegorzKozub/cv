@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { getView } from '../test-helpers';
+import { getView, getElement } from '../test-helpers';
 import { ContentComponent } from './content.component';
 
 describe('ContentComponent', () => {
@@ -30,15 +30,27 @@ describe('ContentComponent', () => {
     expect(value).toEqual('value');
   });
 
-  it('should show value in bullets when asBullets set', () => {
+  it('should show value as bullets when asBullets set', () => {
     component.value = ['value'];
     component.asBullets = true;
     fixture.detectChanges();
     const value = getView(fixture, '.content ul li');
     expect(value).toEqual('value');
+    const classes = getElement(fixture, '.content ul').classList;
+    expect(classes).not.toContain('tags');
+    });
+
+  it('should show value as tags when asTags set', () => {
+    component.value = ['value'];
+    component.asTags = true;
+    fixture.detectChanges();
+    const value = getView(fixture, '.content ul li');
+    expect(value).toEqual('value');
+    const classes = getElement(fixture, '.content ul').classList;
+    expect(classes).toContain('tags');
   });
 
-  it('should show value in paragrahs when asParagraphs set', () => {
+  it('should show value as paragrahs when asParagraphs set', () => {
     component.value = ['value'];
     component.asParagraphs = true;
     fixture.detectChanges();
