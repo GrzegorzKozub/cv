@@ -5,7 +5,8 @@
     "kaizen": "改善",
     "location": "Warsaw, Poland",
     "email": "grzegorz.kozub@gmail.com",
-    "web": "http://www.linkedin.com/in/grzegorzkozub",
+    "linkedin": "linkedin.com/in/grzegorzkozub",
+    "github": "github.com/grzegorzkozub",
     "headline": "Developer and architect. Generalist exploring Domain-Driven Design, Clean Architecture and Microservices. Inspired by DevOps culture, leads Product Teams to design, integrate and deploy small increments frequently to production."
   },
   "skills": [

@@ -7,7 +7,8 @@ const cvFake = <Cv>{
     kaizen: 'header.kaizen',
     location: 'header.location',
     email: 'header.email',
-    web: 'header.web',
+    linkedin: 'header.linkedin',
+    github: 'header.github',
     headline: 'header.headline'
   },
   skills: [

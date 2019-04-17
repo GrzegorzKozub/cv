@@ -13,7 +13,8 @@ export interface Header {
   kaizen: string;
   location: string;
   email: string;
-  web: string;
+  linkedin: string;
+  github: string;
   headline: string;
 }
 
