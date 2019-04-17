@@ -36,7 +36,7 @@ body {
   }
 
   ul {
-    padding-left: 1em;
+    padding-left: 1.25em;
 
     li:not(:first-of-type) {
       @include space-tiny();
