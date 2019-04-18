@@ -74,10 +74,6 @@ body {
     .title {
       @include font-medium();
     }
-
-    .kaizen {
-      @include font-huge();
-    }
   }
 
   .right, & a {

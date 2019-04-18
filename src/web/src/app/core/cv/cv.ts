@@ -10,7 +10,6 @@ export interface Cv {
 export interface Header {
   name: string;
   title: string;
-  kaizen: string;
   location: string;
   email: string;
   linkedin: string;
