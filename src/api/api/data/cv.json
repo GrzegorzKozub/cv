@@ -15,9 +15,7 @@
         "CQRS",
         "Domain-Driven Design",
         "Hexagonal (Ports and Adapters)",
-        "Messaging",
-        "Microservices",
-        "REST"
+        "Microservices"
       ]
     },
     {
@@ -44,7 +42,6 @@
         "Go (learning)",
         "JavaScript",
         "Node.js",
-        "React (learning)",
         "SQL Server",
         "TypeScript"
       ]
