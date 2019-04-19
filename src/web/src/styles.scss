@@ -84,7 +84,7 @@ body {
 
   .headline {
     @include pull-clear();
-    @include space-small();
+    @include space-normal();
   }
 }
 
@@ -92,25 +92,25 @@ body {
   @include pull-clear();
 
   .title {
-    @include space-big();
+    @include space-normal();
     @include font-big();
     @include color-gray();
   }
 
   .chapter {
-  @include pull-clear();
+    @include pull-clear();
 
     .title {
-      @include space-medium();
+      @include space-small();
       @include font-big();
       @include color-green();
     }
 
     .section {
-  @include pull-clear();
+      @include pull-clear();
 
       .title {
-        @include space-normal();
+        @include space-small();
         @include font-big();
         @include color-blue();
       }
