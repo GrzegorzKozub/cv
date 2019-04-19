@@ -50,15 +50,26 @@ body {
 }
 
 .columns {
-  float: left;
+  @include pull-left();
 
   &.margin {
-    margin-right: 4%;
-    width: 32%;
+    @include pull-clear();
+    margin-right: 8%;
+    width: 26%;
   }
 
   &.main {
-    width: 64%;
+    width: 66%;
+  }
+
+  &.left {
+    @include pull-clear();
+    margin-right: 8%;
+    width: 46%;
+  }
+
+  &.right {
+    width: 46%;
   }
 }
 
