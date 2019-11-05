@@ -39,7 +39,7 @@
         ".Net",
         "Angular",
         "C#",
-        "Go (learning)",
+        "Elixir (learning)",
         "JavaScript",
         "Node.js",
         "SQL Server",
@@ -63,7 +63,7 @@
     "titles": [
       {
         "name": "Developer, Architect, Tech Lead",
-        "time": "Since November 2017",
+        "time": "November 2017 - June 2019 (1 year 9 months)",
         "roles": [
           "My first goal was to lead my team to take the ownership of License Optimizer, a legacy product for establishing specific vendor software license position for our customers that is a SaaS offering written in .Net and deployed as monolith. While learning about the domain, we identified the architecture as well as the technical debts we had tackled immediately.",
           "Most importantly, we added database sharding and replication, removed manual tests in favour of automated test suite, created the deployment pipeline up to production including database migrations. All that while adding value for the customers by making changes and fixing bugs.",
@@ -77,6 +77,21 @@
     ]
   },
   "pastJobs": [
+    {
+      "company": {
+        "name": "EcoVadis"
+      },
+      "titles": [
+        {
+          "name": "Developer",
+          "time": "since August 2019",
+          "roles": [
+            "Optimize async and memory allocation in a legacy back office system built mostly with ASP.Net and backed with SQL Server database",
+            "Migrate the back-end of one area of that system to a new version written in .Net Core structured with Ports and Adapters architecture and leveraging CQRS"
+          ]
+        }
+      ]
+    },
     {
       "company": {
         "name": "Apsis International AB"
