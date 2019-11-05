@@ -3,9 +3,9 @@ using api.Cv;
 using api.Footer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace api
 {
@@ -19,7 +19,6 @@ namespace api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddOptions();
             services.Configure<DataConfig>(Configuration.GetSection(nameof(DataConfig)));
@@ -28,9 +27,11 @@ namespace api
             services.AddTransient<ICvService, CvService>();
             services.AddTransient<IFooterService, FooterService>();
             services.AddTransient<IVersionService, VersionService>();
+
+            services.AddControllers();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseCors(builder => builder.AllowAnyOrigin());
 
@@ -40,7 +41,8 @@ namespace api
                 app.UseHsts();
 
             //app.UseHttpsRedirection(); // wkhmltopdf can't follow HTTP 307
-            app.UseMvc();
+            app.UseRouting();
+            app.UseEndpoints(endpoints => endpoints.MapControllers());
         }
     }
 }
