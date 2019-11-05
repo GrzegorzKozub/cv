@@ -33,9 +33,9 @@ $api = Start-Job -ScriptBlock {
 Write-Host 'start web'
 
 $web = Start-Job -ScriptBlock {
-    Set-Location $using:pwd
-    yarn --cwd ./src/web
-    yarn --cwd ./src/web start
+    Set-Location (Join-Path $using:pwd '/src/web')
+    npm install
+    npm start
 }
 
 function Wait ($url) {

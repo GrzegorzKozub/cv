@@ -6,7 +6,6 @@ version.txt
 
 dist
 node_modules
-yarn-error.log
 
 *.pdf
 *.user
