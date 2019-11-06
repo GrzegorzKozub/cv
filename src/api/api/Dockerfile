@@ -1,8 +1,7 @@
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0 AS base
 WORKDIR /app
-EXPOSE 80
 
-FROM microsoft/dotnet:2.2-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
 WORKDIR /src
 COPY api.csproj .
 RUN dotnet restore api.csproj
@@ -17,4 +16,7 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
 COPY --from=publish /src/version.txt .
+#ENV ASPNETCORE_URLS http://*:5000
+#EXPOSE 5000
+EXPOSE 80
 ENTRYPOINT ["dotnet", "api.dll"]

@@ -13,5 +13,3 @@ ARG url=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/${version}/
 RUN wget ${url}
 RUN gdebi --n ${filename}
 
-#ENTRYPOINT ["wkhtmltopdf"]
-
