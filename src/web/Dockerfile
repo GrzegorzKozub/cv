@@ -18,7 +18,7 @@ COPY . /usr/src/app
 
 RUN ng lint
 RUN ng test --watch=false
-RUN ng build
+RUN ng build --aot --prod --configuration=docker
 
 FROM nginx:1.15-alpine AS final
 

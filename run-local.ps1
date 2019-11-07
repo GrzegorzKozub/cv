@@ -35,7 +35,7 @@ Write-Host 'start web'
 $web = Start-Job -ScriptBlock {
     Set-Location (Join-Path $using:pwd '/src/web')
     npm install
-    npm start
+    npm run start-prod
 }
 
 function Wait ($url) {
