@@ -29,7 +29,7 @@ html, body, div, p, ul, li, a {
 body {
   @include font-normal();
   @include color-black();
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Noto Serif', 'Droid Serif', serif;
 
   p:not(:first-of-type) {
     @include space-small();
