@@ -1,4 +1,4 @@
-version: '3.5'
+version: '3.6'
 
 networks:
 
@@ -21,6 +21,11 @@ services:
     networks:
       - net
 
+# to attach
+#   stdin_open: true
+#   tty: true
+#   command: [ 'sh' ]
+
   web:
     image: cv_web
     build:
@@ -34,6 +39,11 @@ services:
     networks:
       - net
 
+# to attach
+#   stdin_open: true
+#   tty: true
+#   command: [ 'sh' ]
+
   pdf:
     image: cv_pdf
     build:
@@ -46,6 +56,12 @@ services:
     depends_on:
       - 'api'
       - 'web'
+
+# to attach
+#   stdin_open: true
+#   tty: true
+#   command: [ 'sh' ]
+
     command: [
       'wkhtmltopdf',
       '--footer-html', 'http://cv_web_1/footer',
@@ -58,3 +74,4 @@ services:
       'http://cv_web_1/cv',
       '/root/cv.pdf'
     ]
+
