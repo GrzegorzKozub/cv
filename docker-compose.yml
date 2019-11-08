@@ -48,7 +48,8 @@ services:
     image: cv_pdf
     build:
       context: src/pdf
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.Alpine
+      #dockerfile: Dockerfile.Ubuntu
     networks:
       - net
     volumes:
