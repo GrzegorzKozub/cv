@@ -21,8 +21,7 @@
     {
       "category": "Ops",
       "tags": [
-        "Azure",
-        "Azure DevOps",
+        "AWS (learning)",
         "docker",
         "git",
         "IIS",
@@ -40,6 +39,7 @@
         "Angular",
         "C#",
         "Elixir (learning)",
+        "Go (learning)",
         "JavaScript",
         "Node.js",
         "SQL Server",
@@ -79,12 +79,26 @@
   "pastJobs": [
     {
       "company": {
+        "name": "Apsis"
+      },
+      "titles": [
+        {
+          "name": "Developer",
+          "time": "Since December 2019",
+          "roles": [
+            "Participate in design, implementation and production support for the public API of Apsis One platform"
+          ]
+        }
+      ]
+    },
+    {
+      "company": {
         "name": "EcoVadis"
       },
       "titles": [
         {
           "name": "Developer",
-          "time": "since August 2019",
+          "time": "August 2019 - November 2019 (4 months)",
           "roles": [
             "Optimize async and memory allocation in a legacy back office system built mostly with ASP.Net and backed with SQL Server database",
             "Migrate the back-end of one area of that system to a new version written in .Net Core structured with Ports and Adapters architecture and leveraging CQRS"
@@ -94,7 +108,7 @@
     },
     {
       "company": {
-        "name": "Apsis International AB"
+        "name": "Apsis"
       },
       "titles": [
         {
@@ -179,7 +193,7 @@
   "notableProjects": [
     {
       "company": {
-        "name": "Apsis International AB"
+        "name": "Apsis"
       },
       "projects": [
         {
